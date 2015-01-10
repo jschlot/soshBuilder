@@ -1,148 +1,179 @@
 'use strict';
 
 browser.ignoreSynchronization = true;
-var CheckoutModal = require('../pages/checkoutflow.js');
+var CheckoutModal = require('../pages/checkoutflow.js'),
+    baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
+    baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
 
-describe('Checkout Modal', function() {
-  // core behaviour
-  it('should handle the buy tickets click correctly', function () {
-    var page;
-    browser.get("http://tapir:chantek@ami.hippo.offlinelabs.com/san-francisco/marketplace/cocktail101winter/m/sH4z/");
+describe('Pre-Click Test Group', function() {
+  var page;
+
+  beforeEach(function(){
+    browser.get(baseURL + baseEvent);
     page = new CheckoutModal();
+  });
 
-    expect(page.BuyTicketsButton.get(0).getAttribute('href')).toBe("http://tapir:chantek@ami.hippo.offlinelabs.com/san-francisco/ticketing/cocktail101winter/m/sH4z/");
-    expect(page.BuyTicketsButton.get(0).getText()).toBe("Buy Tickets");
+  afterEach(function(){
+    page = null;
+  });
+
+  it('should open the checkout modal when you click "Buy Tickets"', function () {
+    expect(page.bodyNode.getAttribute('class')).toBe("");
+    page.BuyTicketsButton.click();
+    expect(page.bodyNode.getAttribute('class')).toBe("md-mode");
+
+  });
+
+});
+
+describe('onPopup Group', function() {
+  var page;
+
+  beforeEach(function(){
+    browser.get(baseURL + baseEvent);
+    page = new CheckoutModal();
     page.BuyTicketsButton.click();
   });
 
-  it('should display display the checkout flow modal correctly upon clicking buy tickets button', function () {
-    var page;
-    browser.get("http://tapir:chantek@ami.hippo.offlinelabs.com/san-francisco/ticketing/cocktail101winter/m/sH4z/");
-    page = new CheckoutModal();
-
-    expect(page.header.EventTitle.get(0).getText()).toBe("Cocktail Den's Secrets Revealed: Expert Pours 101");
-    expect(page.EventLocation.get(0).getText()).toBe("Two Sisters Bar & Books");
-    expect(page.EventTiming.get(0).getText()).toBe("Mon, Jan 26");
-  })
-
-  // it('should have the option to select ticket type', function () {
-
-  // })
-
-  // it('should have option to select number of tickets', function () {
-
-  // })
-
-  // it('should have option to select timings', function () {
-
-  // })
-
-  // it('should have option to switch on extra pairings if they exist', function () {
-
-  // })
-
-  // it('should update the price, tax and tip and total based on user selections', function () {
-
-  // })
-
-  // it('should update number of tickets available based on user selections', function () {
-
-  // })
-
-  // it('should disable the plus button if no tickets are available beyond a number', function () {
-
-  // })
-
-  // it('should disable the minus button after it reaches 0', function () {
-
-  // })
-
-  // it('should update with contact info input fields and credit card info input fields on clicking add payment info button', function () {
-
-  // })
-
-  // it('should include user name, email and phone number under contact info and auto populate for signed in users', function () {
-
-  // })
+  afterEach(function(){
+    page = null;
+  });
 
 
-  // it('should include input field for credit card number, security code and expiration date and auto populate if it already exists', function () {
+  it('should have the correct information in the header', function () {
+  });
 
-  // })
+  it('should have the correct information in the footer', function () {
+  });
 
-  // it('should update the credit card type (eg:visa, mastercard, amex etc) upon entering the credit card number', function () {
+  it('should have the option to select a ticket type', function () {
+    expect(page.ticketTypes.list.count()).toBeGreaterThan(0);
+  });
 
-  // })
+  it('should have the default ticket type option selected', function () {
+    expect(page.ticketTypes.selected.getText()).toContain("General Admission $50");
+    expect(page.ticketTypes.selected.getText()).toContain("Includes all-you-can-eat local Dungeness crab");
+  });
 
-  // it('should show the tickets info, contact info as well as credit card info on clicking save and continue', function () {
+  it('should have the option to select the initial number of tickets', function () {
+    expect(page.numberOfTickets.hasSelector.isPresent()).toBe(true);
+  });
 
-  // })
+  it('should have the start with the default number of tickets', function () {
+    expect(page.numberOfTickets.amount.getText()).toBe('1');
+  });
 
-  // it('should show use promo code link', function () {
+  it('should be able to change the number of tickets', function () {
+    browser.sleep(2000);
+    page.numberOfTickets.incrementBtn.get(0).click();
+    expect(page.numberOfTickets.amount.getText()).toBe('2');
 
-  // })
+    browser.sleep(2000);
+    page.numberOfTickets.incrementBtn.click();
+    expect(page.numberOfTickets.amount.getText()).toBe('3');
 
-  // it('should show an input field upon clicking the promo code link', function () {
+    browser.sleep(2000);
+    page.numberOfTickets.decrementBtn.click();
+    expect(page.numberOfTickets.amount.getText()).toBe('2');
 
-  // })
+    browser.sleep(2000);
+    page.numberOfTickets.decrementBtn.click();
+    expect(page.numberOfTickets.amount.getText()).toBe('1');
 
-  // it('should show apply button to user in order to avail the discount', function () {
+  });
 
-  // })
+  it('should block decrement whenever we are at 1 ticket"', function () {
+    expect(page.numberOfTickets.decrementBtn.getAttribute('class')).toMatch('disabled');
 
-  // it('should show an error message if the promo code entered is invalid', function () {
+    browser.sleep(2000);
+    page.numberOfTickets.incrementBtn.get(0).click();
 
-  // })
+    expect(page.numberOfTickets.decrementBtn.getAttribute('class')).not.toMatch('disabled');
+  });
 
-  // it('should grey out the selection area and hide the downward chevron if there is only one ticket type', function () {
+  it('should block increment whenever we are at 10 tickets"', function () {
+    expect(page.numberOfTickets.incrementBtn.getAttribute('class')).not.toMatch('disabled');
 
-  // })
+    var i= 0, n=10;
 
-  // it('should show cancel button when entering subpage of modal which leads back to top level state', function () {
+    for (i; i<n; i++ ) {
+      browser.sleep(2000);
+      page.numberOfTickets.incrementBtn.get(0).click();
+    }
 
-  // })
+    expect(page.numberOfTickets.amount.getText()).toBe('10');
+    expect(page.numberOfTickets.incrementBtn.getAttribute('class')).toMatch('disabled');
+  });
 
-  // it('lead to a confirmation subpage upon hitting the complete purchase button', function () {
+  it('should display the number of tickets left when there are less or equal to 10 tickets', function () {
+    browser.sleep(2000);
+    page.ticketTypes.selected.click();
 
-  // })
+    browser.sleep(2000);
+    page.ticketTypes.list.get(1).click();
 
-  // it('should show share links for twitter and facebook with prepopulated share text on confirmation subpage', function () {
+    browser.sleep(2000);
+    expect(page.availableTimeslots.list.get(3).element(by.css(".time")).getText()).toBe("11:00AM");
+    expect(page.availableTimeslots.list.get(3).element(by.css(".js-tickets-left")).getText()).toBe("");
+  });
 
-  // })
+  it('should display 1 option by default', function () {
+    // expect(page.availableTimeslots.list.count()).toBe(6);
+    expect(page.availableTimeslots.list.get(3).getCssValue('display')).toBe("list-item");
+    expect(page.availableTimeslots.list.get(3).element(by.css(".time")).getText()).toBe("11:00AM");
+    expect(page.availableTimeslots.list.get(3).element(by.css(".js-tickets-left")).getText()).toBe("");
+  });
 
-  // it('show show additional text letting the user know that they can email at the hyperlinked email address anytime with questions', function () {
+  it('should display 3 sold out options that are sold out when you select "Early-Bird General Admission $40"', function () {
+    browser.sleep(2000);
+    page.ticketTypes.selected.click();
 
-  // })
+    browser.sleep(2000);
+    page.ticketTypes.list.get(0).click();
 
-  // it('show credit card info for logged in, returning customers', function () {
+    expect(page.availableTimeslots.list.get(0).getCssValue('display')).toBe("list-item");
+    expect(page.availableTimeslots.list.get(0).element(by.css(".time")).getText()).toBe("11:00AM");
+    expect(page.availableTimeslots.list.get(0).element(by.css(".js-tickets-left")).getText()).toBe("Sold Out");
+    expect(page.availableTimeslots.list.get(0).getAttribute('class')).toMatch("sold-out");
 
-  // })
+    expect(page.availableTimeslots.list.get(1).getCssValue('display')).toBe("list-item");
+    expect(page.availableTimeslots.list.get(1).element(by.css(".time")).getText()).toBe("1:15PM");
+    expect(page.availableTimeslots.list.get(1).element(by.css(".js-tickets-left")).getText()).toBe("Sold Out");
+    expect(page.availableTimeslots.list.get(1).getAttribute('class')).toMatch("sold-out");
 
-  // it('should remove credit card info upon hitting delete button', function () {
+    expect(page.availableTimeslots.list.get(2).getCssValue('display')).toBe("list-item");
+    expect(page.availableTimeslots.list.get(2).element(by.css(".time")).getText()).toBe("4:30PM");
+    expect(page.availableTimeslots.list.get(2).element(by.css(".js-tickets-left")).getText()).toBe("Sold Out");
+    expect(page.availableTimeslots.list.get(2).getAttribute('class')).toMatch("sold-out");
+  });
 
-  // })
+  it('should have a switch option for the crab promo page', function () {
+  });
 
-  // it('should show input fields for credit info upon hitting add credit card info button', function () {
+  it('should toggle properly when we click the Sake Pairings option', function () {
+  });
 
-  // })
+  //// testing the calculator
 
-  // it('should display an error message when not enough tickets are available for a given timeslot or ticket type', function (){
+  it('should display $40 for a single ticket using the default option ', function () {
+  });
 
-  // })
+  it('should display $40 for a single ticket using the default option ', function () {
+  });
 
-  // it('should display a message declaring only x tickets available if there are less than 10 tickets available for a given timeslot and ticket type combination', function () {
+//  it('should display $80 for 2 tickets using the default option ', function () {
+//  });
 
-  // })
+  it('should add the cost of Sake Pairing to the subtotal when we toggle the switch on', function () {
+  });
 
-  // it('Test selecting a different card to checkout'
-  // Only x tickets' left is displayed for any timeslot + ticket type combination that has < 10 tickets when hovering
-  // Default timeslot is the first timeslot that has at least two tickets available, or the first timeslot that has at least one ticket
-  // After a purchase, Merchant Dashboard shows correct update (added ticket sale)
-  // Race condition for purchasing (Only 1 tickets left, have two people buying the last ticket from different devices/platform). Only one person should get the ticket
-  // Test error messaging when tickets become sold out in the middle of purchase flow
-  // Honors sosh-paid and merchant-paid discount code
-  // Test ref is carried over correctly in buy flow
-  // If a user already purchased via iOS, web should already have their CC stored in checkout flow
-  // If a user already purchased via web, iOS should already have their CC stored in checkout flow
-  // Checkout flow works (able to buy tickets)
+  it('should remove the cost of Sake Pairing to the subtotal when we toggle the switch off', function () {
+  });
+
+
+  /*
+   it('should blahbity when it blahs', function () {
+   });
+   */
+
 });
