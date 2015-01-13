@@ -75,6 +75,7 @@ var CheckoutModal = function () {
   this.paymentRecap.promoBox = element(by.css('.promo-code-form-group'));
   this.paymentRecap.promoCodeInput = element(by.css('.promo-code-form input[name=promo]'));
   this.paymentRecap.promoCodeButton = element(by.css('.promo-code-form .promo-button'));
+  this.paymentRecap.promoCodeError = element(by.css('.promo-code-form .error'));
 
 };
 
