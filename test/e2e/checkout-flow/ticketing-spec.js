@@ -5,7 +5,7 @@ var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
     baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
 
-describe('Ticket Selection', function() {
+describe('Ticket Selection: Single Option:', function() {
     var page;
 
     beforeEach(function(){
@@ -73,6 +73,7 @@ describe('Ticket Selection', function() {
 
         var i= 0, n=10;
 
+        browser.sleep(2000);
         for (i; i<n; i++ ) {
             page.numberOfTickets.incrementBtn.get(0).click();
             browser.sleep(2000);
@@ -131,13 +132,13 @@ describe('Ticket Selection', function() {
         expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$150.40");
     });
 
-     it('should have a switch option for the crab promo page', function () {
+    it('should have a switch option for the crab promo page', function () {
          expect(page.optionsPicker.box.getCssValue('display')).toBe("block");
          expect(page.optionsPicker.title.getText()).toBe("Sake Pairing");
          expect(page.optionsPicker.description.getText()).toContain("six two-ounce pours of sake");
      });
 
-     it('should toggle the cost of Sake Pairing to the subtotal when we toggle the switch on', function () {
+    it('should toggle the cost of Sake Pairing to the subtotal when we toggle the switch on', function () {
          page.optionsPicker.switch.click();
          browser.sleep(2000);
 

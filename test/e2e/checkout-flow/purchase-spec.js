@@ -40,7 +40,6 @@ describe('Purchase Spec:', function() {
         expect(page.paymentRecap.email.getText()).toBe("jack@sosh.com");
         expect(page.paymentRecap.phone.getText()).toBe("415 555-1234");
         expect(page.paymentRecap.payment.getText()).toBe("AMERICAN EXPRESS xxx-0005");
-
     });
 
     it('should show the promo link after "Save" button is clicked w/o errors; clicking the link reveals the input box', function () {
@@ -52,7 +51,6 @@ describe('Purchase Spec:', function() {
 
         expect(page.paymentRecap.promoButton.getCssValue("display")).toBe("none");
         expect(page.paymentRecap.promoBox.getCssValue("display")).toBe("block");
-
     });
 
     it('should an error if the promo code is invalid, and show an "accepted" message if it is valid', function () {
@@ -60,6 +58,7 @@ describe('Purchase Spec:', function() {
         browser.sleep(2000);
 
         page.paymentRecap.promoCodeInput.sendKeys("badpromocode");
+
         page.paymentRecap.promoCodeButton.click();
         browser.sleep(2000);
 
@@ -69,6 +68,7 @@ describe('Purchase Spec:', function() {
     it('should show the purchase complete view after entering everything in and hitting "complete purchase"', function () {
         // ToDo Verify completion of purchase
         console.log("P");
+        expect(false).toBe(true);
 
         /*
          expect(page.views.ticketing.getCssValue('display')).toBe("none");

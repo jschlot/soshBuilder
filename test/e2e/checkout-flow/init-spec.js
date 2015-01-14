@@ -3,7 +3,7 @@
 browser.ignoreSynchronization = true;
 var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
-    baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
+    baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/?promo_type=marketplace_promo&ref=new_homepage_promo&content_type=3';
 
 describe('Init Spec:', function() {
     var page;

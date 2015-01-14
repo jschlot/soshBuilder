@@ -3,9 +3,9 @@
 browser.ignoreSynchronization = true;
 var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
-    baseEvent = '/san-francisco/marketplace/driven/m/5RT7/';
+    baseEvent = '/san-francisco/marketplace/deepdiveart/m/dL3z/';
 
-describe('Ticket Selection', function() {
+describe('Ticket Selection:', function() {
     var page;
 
     beforeEach(function () {
@@ -24,7 +24,7 @@ describe('Ticket Selection', function() {
         expect(page.ticketTypes.list.count()).toBe(1);
 
         // ToDo verify chevron is hidden (it's not hidden right now)
-        console.log("P");
+        expect(false).toBe(true);
 
     });
 

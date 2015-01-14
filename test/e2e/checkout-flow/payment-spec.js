@@ -5,7 +5,7 @@ var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
     baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
 
-describe('Payment Info', function() {
+describe('Payment Info:', function() {
     var page;
 
     beforeEach(function(){
