@@ -67,7 +67,6 @@ describe('Purchase Spec:', function() {
 
     it('should show the purchase complete view after entering everything in and hitting "complete purchase"', function () {
         // ToDo Verify completion of purchase
-        console.log("P");
         expect(false).toBe(true);
 
         /*

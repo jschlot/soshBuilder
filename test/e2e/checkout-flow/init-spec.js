@@ -18,8 +18,8 @@ describe('Init Spec:', function() {
     });
 
     it('should carry over the ref code from the buy flow', function () {
-        // ToDo - verify ref passed over
-        console.log("P");
+        // ToDo - verify ref passed over, not sure how to test this
+        expect(false).toBe(true);
     });
 
     it('should open the checkout modal when you click "Buy Tickets"', function () {
