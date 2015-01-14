@@ -23,6 +23,8 @@ var CheckoutModal = function () {
   this.footerBlock.addPaymentButton = element.all(by.css('.add-info-button'));
   this.footerBlock.cancelPaymentButton = element(by.css('.footer .cancel-button'));
   this.footerBlock.savePaymentButton = element(by.css('.footer .save-continue-button'));
+  this.footerBlock.securityStatement = element(by.css('.footer .secure-txt'));
+
 
   this.views = {};
   this.views.ticketing = element(by.css('.view-ticketing'));
@@ -45,13 +47,15 @@ var CheckoutModal = function () {
   this.availableTimeslots = {};
   this.availableTimeslots.list = element.all(by.css('.timeslot-selector ul li'));
 
+  this.optionsPicker = {};
+  this.optionsPicker.box = element(by.css('.options-selector-wrapper'));
+  this.optionsPicker.title = element(by.css('.options-selector-wrapper .option-title'));
+  this.optionsPicker.description = element(by.css('.options-selector-wrapper .option-text'));
+  this.optionsPicker.switch = element(by.css('.options-selector-wrapper .switch label'));
+
   //// Line Items
   this.lineItems = {};
   this.lineItems.list = element.all(by.css('.line-items .item'));
-  this.lineItems.ticketAmount = this.lineItems.list.get(0).element(by.css('.label'));
-  this.lineItems.ticketCost = this.lineItems.list.get(0).element(by.css('.value'));
-  this.lineItems.taxAndTip = this.lineItems.list.get(1).element(by.css('.value'));
-  this.lineItems.total = this.lineItems.list.get(2).element(by.css('.value'));
 
   //// Payment Info form
   this.paymentInfoForm = {};
@@ -65,6 +69,7 @@ var CheckoutModal = function () {
   this.paymentInfoForm.cc.expirationDate = element(by.css('.add-card-form .expiration input'));
   this.paymentInfoForm.cc.securityCode = element(by.css('.add-card-form .security input'));
 
+  //// Payment Info read-only section in the ticketing view
   this.paymentRecap = {};
   this.paymentRecap.name = element(by.css('.contact-info .name'));
   this.paymentRecap.email = element(by.css('.contact-info .email'));

@@ -1,11 +1,11 @@
 'use strict';
 
 browser.ignoreSynchronization = true;
-var CheckoutModal = require('../pages/checkoutflow.js'),
+var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
     baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
 
-describe('Wrapping Up an Order', function() {
+describe('Purchase Spec:', function() {
     var page;
 
     beforeEach(function(){
@@ -44,13 +44,13 @@ describe('Wrapping Up an Order', function() {
     });
 
     it('should show the promo link after "Save" button is clicked w/o errors; clicking the link reveals the input box', function () {
-        expect(page.paymentRecap.savePaymentButton.getCssValue("display")).toBe("block");
+        expect(page.paymentRecap.promoButton.getCssValue("display")).toBe("inline");
         expect(page.paymentRecap.promoBox.getCssValue("display")).toBe("none");
 
         page.paymentRecap.promoButton.click();
         browser.sleep(2000);
 
-        expect(page.paymentRecap.savePaymentButton.getCssValue("display")).toBe("none");
+        expect(page.paymentRecap.promoButton.getCssValue("display")).toBe("none");
         expect(page.paymentRecap.promoBox.getCssValue("display")).toBe("block");
 
     });
@@ -60,16 +60,21 @@ describe('Wrapping Up an Order', function() {
         browser.sleep(2000);
 
         page.paymentRecap.promoCodeInput.sendKeys("badpromocode");
-        expect(page.paymentRecap.promoCodeError.getText()).toBe("This promo code is not valid");
+        page.paymentRecap.promoCodeButton.click();
+        browser.sleep(2000);
+
+        expect(page.paymentRecap.promoCodeError.getText()).toBe("This promo code is not valid.");
     });
 
-    it('should show the purchase complete page after entering everything in and hitting "complete purchase"', function () {
+    it('should show the purchase complete view after entering everything in and hitting "complete purchase"', function () {
+        // ToDo Verify completion of purchase
+        console.log("P");
+
+        /*
+         expect(page.views.ticketing.getCssValue('display')).toBe("none");
+         expect(page.views.payment.getCssValue('display')).toBe("none");
+         expect(page.views.success.getCssValue('display')).toBe("block");
+        */
+
     });
-
-
-    /*
-     it('should blahbity when it blahs', function () {
-     });
-     */
-
 });
