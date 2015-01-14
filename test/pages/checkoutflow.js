@@ -25,7 +25,6 @@ var CheckoutModal = function () {
   this.footerBlock.savePaymentButton = element(by.css('.footer .save-continue-button'));
   this.footerBlock.securityStatement = element(by.css('.footer .secure-txt'));
 
-
   this.views = {};
   this.views.ticketing = element(by.css('.view-ticketing'));
   this.views.payment = element(by.css('.view-payment'));
