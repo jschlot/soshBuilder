@@ -9,7 +9,7 @@ var CheckoutModal = function () {
 
   //// the Header
   this.headerBlock = {};
-  this.headerBlock.photo = element.all(by.css('.checkout-modal-wrapper .header .photo img'));
+  this.headerBlock.photo = element(by.css('.checkout-modal-wrapper .header .photo img'));
   this.headerBlock.title = element.all(by.css('.checkout-modal-wrapper .header .info .title')).get(0);
 
   this.headerBlock.detailsList = element.all(by.css('.checkout-modal-wrapper .header .details .detail-item p'));
@@ -23,17 +23,24 @@ var CheckoutModal = function () {
   this.footerBlock.addPaymentButton = element.all(by.css('.add-info-button'));
   this.footerBlock.cancelPaymentButton = element(by.css('.footer .cancel-button'));
   this.footerBlock.savePaymentButton = element(by.css('.footer .save-continue-button'));
+  this.footerBlock.completePurchase = element(by.css('.footer .complete-button'));
   this.footerBlock.securityStatement = element(by.css('.footer .secure-txt'));
 
+  //// Different Views
   this.views = {};
   this.views.ticketing = element(by.css('.view-ticketing'));
   this.views.payment = element(by.css('.view-payment'));
-  this.views.success = element(by.css('.view-success'));
+  this.views.success = element(by.css('.view-success-wrapper'));
 
   //// Ticket Type
   this.ticketTypes = {};
   this.ticketTypes.list = element.all(by.css('.ticket-type-selector ul li'));
-  this.ticketTypes.selected = element.all(by.css('.selected-ticket-type')).get(0);
+  this.ticketTypes.selected = {};
+  this.ticketTypes.selected.box = element(by.css('.selected-ticket-type'));
+  this.ticketTypes.selected.name = element(by.css('.selected-ticket-type .ticket-name'));
+  this.ticketTypes.selected.price = element(by.css('.selected-ticket-type .ticket-price'));
+  this.ticketTypes.selected.details = element(by.css('.selected-ticket-type .ticket-details'));
+  this.ticketTypes.selected.arrow = element(by.css('.selected-ticket-type .icon-down'));
 
   //// Number of tickets
   this.numberOfTickets = {};
@@ -46,6 +53,7 @@ var CheckoutModal = function () {
   this.availableTimeslots = {};
   this.availableTimeslots.list = element.all(by.css('.timeslot-selector ul li'));
 
+  //// Switch Picker
   this.optionsPicker = {};
   this.optionsPicker.box = element(by.css('.options-selector-wrapper'));
   this.optionsPicker.title = element(by.css('.options-selector-wrapper .option-title'));
@@ -74,6 +82,7 @@ var CheckoutModal = function () {
   this.paymentRecap.email = element(by.css('.contact-info .email'));
   this.paymentRecap.phone = element(by.css('.contact-info .phone'));
   this.paymentRecap.payment = element(by.css('.payment-info .card'));
+  this.paymentRecap.editBtn = element(by.css('.payment-info .edit'));
 
   this.paymentRecap.promoButton = element(by.css('.promo-code-wrapper .show-promo-link'));
   this.paymentRecap.promoBox = element(by.css('.promo-code-form-group'));
@@ -81,6 +90,9 @@ var CheckoutModal = function () {
   this.paymentRecap.promoCodeButton = element(by.css('.promo-code-form .promo-button'));
   this.paymentRecap.promoCodeError = element(by.css('.promo-code-form .error'));
 
+  //// Order Success view
+  this.successView = {};
+  this.successView.time = element(by.css('.success-view .time'));
 };
 
 module.exports = CheckoutModal;

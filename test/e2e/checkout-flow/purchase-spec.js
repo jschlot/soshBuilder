@@ -3,7 +3,7 @@
 browser.ignoreSynchronization = true;
 var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
-    baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
+    baseEvent = '/san-francisco/marketplace/hannibal/m/msCZ/';
 
 describe('Purchase Spec:', function() {
     var page;
@@ -24,7 +24,7 @@ describe('Purchase Spec:', function() {
         page.paymentInfoForm.cc.securityCode.sendKeys("516");
 
         page.footerBlock.savePaymentButton.click();
-        browser.sleep(2000);
+        browser.sleep(6000);
     });
 
     afterEach(function(){
@@ -41,6 +41,7 @@ describe('Purchase Spec:', function() {
         expect(page.paymentRecap.phone.getText()).toBe("415 555-1234");
         expect(page.paymentRecap.payment.getText()).toBe("AMERICAN EXPRESS xxx-0005");
     });
+
 
     it('should show the promo link after "Save" button is clicked w/o errors; clicking the link reveals the input box', function () {
         expect(page.paymentRecap.promoButton.getCssValue("display")).toBe("inline");
@@ -66,14 +67,13 @@ describe('Purchase Spec:', function() {
     });
 
     it('should show the purchase complete view after entering everything in and hitting "complete purchase"', function () {
-        // ToDo Verify completion of purchase
-        expect(false).toBe(true);
+        page.footerBlock.completePurchase.click();
+        browser.sleep(5000);
 
-        /*
-         expect(page.views.ticketing.getCssValue('display')).toBe("none");
-         expect(page.views.payment.getCssValue('display')).toBe("none");
-         expect(page.views.success.getCssValue('display')).toBe("block");
-        */
+        expect(page.views.ticketing.getCssValue('display')).toBe("none");
+        expect(page.views.payment.getCssValue('display')).toBe("none");
+        expect(page.views.success.getCssValue('display')).toBe("block");
 
+        expect(page.successView.title).toBe("11 a.m.");
     });
 });

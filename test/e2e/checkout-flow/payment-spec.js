@@ -3,7 +3,7 @@
 browser.ignoreSynchronization = true;
 var CheckoutModal = require('../../pages/checkoutflow.js'),
     baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
-    baseEvent = '/san-francisco/marketplace/somastreat/m/5VKa/';
+    baseEvent = '/san-francisco/marketplace/hannibal/m/msCZ/';
 
 describe('Payment Info:', function() {
     var page;
@@ -60,4 +60,5 @@ describe('Payment Info:', function() {
         browser.sleep(2000);
         expect(page.paymentInfoForm.cc.cardNumber.getAttribute('class')).toMatch('amex');
     });
+
 });
