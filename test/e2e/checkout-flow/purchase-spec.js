@@ -74,6 +74,6 @@ describe('Purchase Spec:', function() {
         expect(page.views.payment.getCssValue('display')).toBe("none");
         expect(page.views.success.getCssValue('display')).toBe("block");
 
-        expect(page.successView.title).toBe("11 a.m.");
+        expect(page.successView.time).toBe("11 a.m.");
     });
 });
