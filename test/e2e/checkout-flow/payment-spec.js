@@ -14,7 +14,7 @@ describe('Payment Info:', function() {
         page.BuyTicketsButton.click();
         browser.sleep(2000);
         page.footerBlock.addPaymentButton.get(0).click();
-        browser.sleep(2000);
+        browser.sleep(5000);
     });
 
     afterEach(function(){
