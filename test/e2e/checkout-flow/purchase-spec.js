@@ -54,7 +54,7 @@ describe('Purchase Spec:', function() {
         expect(page.paymentRecap.promoBox.getCssValue("display")).toBe("block");
     });
 
-    it('should an error if the promo code is invalid, and show an "accepted" message if it is valid', function () {
+    it('should an error if the promo code is invalid', function () {
         page.paymentRecap.promoButton.click();
         browser.sleep(2000);
 
@@ -66,6 +66,18 @@ describe('Purchase Spec:', function() {
         expect(page.paymentRecap.promoCodeError.getText()).toBe("This promo code is not valid.");
     });
 
+    it('should a promo code success message if the promo code is valid', function () {
+        page.paymentRecap.promoButton.click();
+        browser.sleep(2000);
+
+        page.paymentRecap.promoCodeInput.sendKeys("cannibal");
+
+        page.paymentRecap.promoCodeButton.click();
+        browser.sleep(2000);
+
+        expect(page.paymentRecap.promoCodeSuccess.getText()).toBe("Promo code successfully applied.");
+    });
+
     it('should show the purchase complete view after entering everything in and hitting "complete purchase"', function () {
         page.footerBlock.completePurchase.click();
         browser.sleep(5000);
@@ -74,6 +86,6 @@ describe('Purchase Spec:', function() {
         expect(page.views.payment.getCssValue('display')).toBe("none");
         expect(page.views.success.getCssValue('display')).toBe("block");
 
-        expect(page.successView.time).toBe("11 a.m.");
+        expect(page.successView.time.getText()).toBe("11 a.m.");
     });
 });
