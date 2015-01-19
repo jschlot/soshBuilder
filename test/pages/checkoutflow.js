@@ -94,6 +94,9 @@ var CheckoutModal = function () {
   //// Order Success view
   this.successView = {};
   this.successView.time = element(by.css('.success-view .time'));
+  this.successView.cardEnding = element(by.css('.success-view .last4'));
+  this.successView.cardCharge = element(by.css('.success-view .price'));
+  this.successView.confirmationEmail = element(by.css('.success-view .email'));
 };
 
 module.exports = CheckoutModal;

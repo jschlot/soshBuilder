@@ -37,17 +37,22 @@ describe('Ticket Selection: Multi Options:', function() {
             expect(page.numberOfTickets.hasSelector.isPresent()).toBe(true);
         });
 
-        it('should have the start with the default number of tickets', function () {
-            expect(page.numberOfTickets.amount.getText()).toBe('1');
+        it('should have the start with the default number of tickets (2)', function () {
+            expect(page.numberOfTickets.amount.getText()).toBe('2');
         });
 
         it('should be able to change the number of tickets', function () {
             page.numberOfTickets.incrementBtn.get(0).click();
             browser.sleep(2000);
 
-            expect(page.numberOfTickets.amount.getText()).toBe('2');
+            expect(page.numberOfTickets.amount.getText()).toBe('3');
 
             page.numberOfTickets.incrementBtn.click();
+            browser.sleep(2000);
+
+            expect(page.numberOfTickets.amount.getText()).toBe('4');
+
+            page.numberOfTickets.decrementBtn.click();
             browser.sleep(2000);
 
             expect(page.numberOfTickets.amount.getText()).toBe('3');
@@ -64,18 +69,17 @@ describe('Ticket Selection: Multi Options:', function() {
         });
 
         it('should block decrement whenever we are at 1 ticket"', function () {
-            expect(page.numberOfTickets.decrementBtn.getAttribute('class')).toMatch('disabled');
-
-            page.numberOfTickets.incrementBtn.get(0).click();
+            page.numberOfTickets.decrementBtn.click();
             browser.sleep(2000);
 
-            expect(page.numberOfTickets.decrementBtn.getAttribute('class')).not.toMatch('disabled');
+            expect(page.numberOfTickets.decrementBtn.getAttribute('class')).toMatch('disabled');
+            expect(page.numberOfTickets.incrementBtn.getAttribute('class')).not.toMatch('disabled');
         });
 
         it('should block increment whenever we are at 10 tickets"', function () {
             expect(page.numberOfTickets.incrementBtn.getAttribute('class')).not.toMatch('disabled');
 
-            var i= 0, n=10;
+            var i= 0, n=9;
 
             browser.sleep(2000);
             for (i; i<n; i++ ) {
@@ -101,20 +105,20 @@ describe('Ticket Selection: Multi Options:', function() {
         });
 
         it('should display correctly for 1 ticket using the default option ', function () {
-            expect(page.lineItems.list.get(0).element(by.css('.label')).getText()).toContain("1 X");
-            expect(page.lineItems.list.get(0).element(by.css('.value')).getText()).toBe("$40.00");
-            expect(page.lineItems.list.get(1).element(by.css('.value')).getText()).toBe("$3.20");
-            expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$43.20");
+            expect(page.lineItems.list.get(0).element(by.css('.label')).getText()).toContain("2 X");
+            expect(page.lineItems.list.get(0).element(by.css('.value')).getText()).toBe("$80.00");
+            expect(page.lineItems.list.get(1).element(by.css('.value')).getText()).toBe("$6.40");
+            expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$86.40");
         });
 
         it('should display correctly for 2 tickets using the default option ', function () {
             page.numberOfTickets.incrementBtn.get(0).click();
             browser.sleep(2000);
 
-            expect(page.lineItems.list.get(0).element(by.css('.label')).getText()).toContain("2 X");
-            expect(page.lineItems.list.get(0).element(by.css('.value')).getText()).toBe("$80.00");
-            expect(page.lineItems.list.get(1).element(by.css('.value')).getText()).toBe("$6.40");
-            expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$86.40");
+            expect(page.lineItems.list.get(0).element(by.css('.label')).getText()).toContain("3 X");
+            expect(page.lineItems.list.get(0).element(by.css('.value')).getText()).toBe("$120.00");
+            expect(page.lineItems.list.get(1).element(by.css('.value')).getText()).toBe("$9.60");
+            expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$129.60");
         });
     });
 
@@ -188,15 +192,15 @@ describe('Ticket Selection: Multi Options:', function() {
             page.optionsPicker.switch.click();
             browser.sleep(2000);
 
-            expect(page.lineItems.list.get(0).element(by.css('.label')).getText()).toContain("1 X");
-            expect(page.lineItems.list.get(0).element(by.css('.value')).getText()).toBe("$30.00");
+            expect(page.lineItems.list.get(0).element(by.css('.label')).getText()).toContain("2 X");
+            expect(page.lineItems.list.get(0).element(by.css('.value')).getText()).toBe("$60.00");
 
-            expect(page.lineItems.list.get(1).element(by.css('.label')).getText()).toBe("1 X STORY TIME");
-            expect(page.lineItems.list.get(1).element(by.css('.value')).getText()).toBe("$25.00");
+            expect(page.lineItems.list.get(1).element(by.css('.label')).getText()).toBe("2 X STORY TIME");
+            expect(page.lineItems.list.get(1).element(by.css('.value')).getText()).toBe("$50.00");
 
-            expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$4.40");
+            expect(page.lineItems.list.get(2).element(by.css('.value')).getText()).toBe("$8.80");
 
-            expect(page.lineItems.list.get(3).element(by.css('.value')).getText()).toBe("$59.40");
+            expect(page.lineItems.list.get(3).element(by.css('.value')).getText()).toBe("$118.80");
         });
     });
 });

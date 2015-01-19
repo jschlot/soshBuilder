@@ -24,7 +24,7 @@ describe('Purchase Spec:', function() {
         page.paymentInfoForm.cc.securityCode.sendKeys("516");
 
         page.footerBlock.savePaymentButton.click();
-        browser.sleep(6000);
+        browser.sleep(2000);
     });
 
     afterEach(function(){
@@ -80,12 +80,15 @@ describe('Purchase Spec:', function() {
 
     it('should show the purchase complete view after entering everything in and hitting "complete purchase"', function () {
         page.footerBlock.completePurchase.click();
-        browser.sleep(5000);
+        browser.sleep(2000);
 
         expect(page.views.ticketing.getCssValue('display')).toBe("none");
         expect(page.views.payment.getCssValue('display')).toBe("none");
         expect(page.views.success.getCssValue('display')).toBe("block");
 
         expect(page.successView.time.getText()).toBe("11 a.m.");
+        expect(page.successView.cardEnding.getText()).toBe("0005");
+        expect(page.successView.cardCharge.getText()).toBe("$86.40");
+        expect(page.successView.confirmationEmail.getText()).toBe("jack@sosh.com");
     });
 });
