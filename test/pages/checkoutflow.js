@@ -61,6 +61,7 @@ var CheckoutModal = function () {
   this.optionsPicker.switch = element(by.css('.options-selector-wrapper .switch label'));
 
   //// Line Items
+  //// Line Items
   this.lineItems = {};
   this.lineItems.list = element.all(by.css('.line-items .item'));
 
@@ -84,7 +85,7 @@ var CheckoutModal = function () {
   this.paymentRecap.payment = element(by.css('.payment-info .card'));
   this.paymentRecap.editBtn = element(by.css('.payment-info .edit'));
 
-  this.paymentRecap.promoButton = element(by.css('.promo-code-wrapper .show-promo-link'));
+  this.paymentRecap.promoButton = element(by.css('.js-show-promo-link'));
   this.paymentRecap.promoBox = element(by.css('.promo-code-form-group'));
   this.paymentRecap.promoCodeInput = element(by.css('.promo-code-form input[name=promo]'));
   this.paymentRecap.promoCodeButton = element(by.css('.promo-code-form .promo-button'));

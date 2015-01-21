@@ -31,7 +31,7 @@ describe('Purchase Spec:', function() {
         page = null;
     });
 
-    it('should show the updated, abbreviated payment info after "Save" button is clicked w/o errors', function () {
+   it('should show the updated, abbreviated payment info after "Save" button is clicked w/o errors', function () {
         expect(page.views.ticketing.getCssValue('display')).toBe("block");
         expect(page.views.payment.getCssValue('display')).toBe("none");
         expect(page.views.success.getCssValue('display')).toBe("none");
@@ -63,7 +63,7 @@ describe('Purchase Spec:', function() {
         page.paymentRecap.promoCodeButton.click();
         browser.sleep(2000);
 
-        expect(page.paymentRecap.promoCodeError.getText()).toBe("This promo code is not valid.");
+        expect(page.paymentRecap.promoCodeError.getText()).toBe("The promo code you entered does not exist. Sorry!");
     });
 
     it('should a promo code success message if the promo code is valid', function () {
@@ -86,7 +86,7 @@ describe('Purchase Spec:', function() {
         expect(page.views.payment.getCssValue('display')).toBe("none");
         expect(page.views.success.getCssValue('display')).toBe("block");
 
-        expect(page.successView.time.getText()).toBe("11 a.m.");
+        expect(page.successView.time.getText()).toBe("11 am");
         expect(page.successView.cardEnding.getText()).toBe("0005");
         expect(page.successView.cardCharge.getText()).toBe("$86.40");
         expect(page.successView.confirmationEmail.getText()).toBe("jack@sosh.com");

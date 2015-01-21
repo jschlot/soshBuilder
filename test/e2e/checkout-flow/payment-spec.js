@@ -27,10 +27,13 @@ describe('Payment Info:', function() {
         expect(page.views.success.getCssValue('display')).toBe("none");
 
         page.footerBlock.cancelPaymentButton.click();
+        browser.sleep(2000);
 
         expect(page.views.ticketing.getCssValue('display')).toBe("block");
         expect(page.views.payment.getCssValue('display')).toBe("none");
         expect(page.views.success.getCssValue('display')).toBe("none");
+
+        browser.sleep(10000);
     });
 
     it('should toggle an error when you click the "Save" button on the PI page and entered nothing', function () {
