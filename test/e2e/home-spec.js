@@ -7,7 +7,7 @@ describe('Home Page', function() {
 	var page;
 
 	beforeEach(function () {
-		browser.get("http://www.sosh.com");
+		browser.get("/");
 		page = new HomePage();
 	});
 

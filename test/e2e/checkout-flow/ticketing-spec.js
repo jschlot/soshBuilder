@@ -2,7 +2,6 @@
 
 browser.ignoreSynchronization = true;
 var CheckoutModal = require('../../pages/checkoutflow.js'),
-    baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
     baseEvent = '/san-francisco/marketplace/hannibal/m/msCZ/';
 
 describe('Ticket Selection: Multi Options:', function() {
@@ -11,7 +10,7 @@ describe('Ticket Selection: Multi Options:', function() {
         var page;
 
         beforeEach(function(){
-            browser.get(baseURL + baseEvent);
+            browser.get(baseEvent);
             page = new CheckoutModal();
 
             page.BuyTicketsButton.click();
@@ -126,7 +125,7 @@ describe('Ticket Selection: Multi Options:', function() {
         var page;
 
         beforeEach(function(){
-            browser.get(baseURL + baseEvent);
+            browser.get(baseEvent);
             page = new CheckoutModal();
 
             page.BuyTicketsButton.click();
@@ -165,7 +164,7 @@ describe('Ticket Selection: Multi Options:', function() {
         var page;
 
         beforeEach(function(){
-            browser.get(baseURL + baseEvent);
+            browser.get(baseEvent);
             page = new CheckoutModal();
 
             page.BuyTicketsButton.click();

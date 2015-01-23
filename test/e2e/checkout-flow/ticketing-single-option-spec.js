@@ -2,14 +2,13 @@
 
 browser.ignoreSynchronization = true;
 var CheckoutModal = require('../../pages/checkoutflow.js'),
-    baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com',
     baseEvent = '/san-francisco/marketplace/deepdiveart/m/dL3z/';
 
 describe('Ticket Selection: Single Option:', function() {
     var page;
 
     beforeEach(function () {
-        browser.get(baseURL + baseEvent);
+        browser.get(baseEvent);
         page = new CheckoutModal();
 
         page.BuyTicketsButton.click();
