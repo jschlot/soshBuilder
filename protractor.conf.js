@@ -1,5 +1,12 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
+  multiCapabilities: [{
+    'browserName': 'chrome'
+  }, {
+    'browserName': 'safari'
+  }, {
+    'browserName': 'firefox'
+  }],
   suites: {
     smoke: [
       'test/e2e/*-spec.js',
