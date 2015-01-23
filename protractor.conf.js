@@ -1,3 +1,5 @@
+var HtmlReporter = require('protractor-html-screenshot-reporter');
+
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     baseUrl: "http://tapir:chantek@jack.tapir.offlinelabs.com",
@@ -29,5 +31,11 @@ exports.config = {
             'test/e2e/checkout-flow/ticketing-spec.js',
             'test/e2e/checkout-flow/ticketing-single-option-spec.js'
         ]
+    },
+    onPrepare: function() {
+        // Add a reporter and store screenshots to `screnshots`:
+        jasmine.getEnv().addReporter(new HtmlReporter({
+            baseDirectory: 'screenshots'
+        }));
     }
 };
