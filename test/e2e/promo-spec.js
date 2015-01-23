@@ -8,7 +8,7 @@ describe('Promo Page', function() {
     // baseline behavior aka "classic" promo page
     it('should display the default promo page correctly if no bullet points are filled', function() {
         var page;
-        browser.get("http://tapir:chantek@jack.tapir.offlinelabs.com/san-francisco/marketplace/antempo/m/5gbz/");
+        browser.get("/san-francisco/marketplace/antempo/m/5gbz/");
         page = new PromoPage();
 
         // the page title tag matches the main page title displayed in the body

@@ -2,7 +2,7 @@
 
 browser.ignoreSynchronization = true;
 var LoginPage = require('../pages/login.js'),
-    baseURL = 'http://tapir:chantek@jack.tapir.offlinelabs.com/accounts/login/';
+    baseURL = '/accounts/login/';
 
 describe('Login Spec:', function() {
     var page;
