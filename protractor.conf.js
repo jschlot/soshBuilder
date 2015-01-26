@@ -6,8 +6,6 @@ exports.config = {
     multiCapabilities: [{
         'browserName': 'chrome'
     }, {
-        'browserName': 'safari'
-    }, {
         'browserName': 'firefox'
     }],
     suites: {
@@ -16,6 +14,7 @@ exports.config = {
             'test/e2e/checkout-flow/*-spec.js'
         ],
         login: 'test/e2e/login-spec.js',
+        promo: 'test/e2e/promo-spec.js',
         home: 'test/e2e/home-spec.js',
         checkout: [
             'test/e2e/checkout-flow/init-spec.js',
