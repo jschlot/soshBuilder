@@ -19,7 +19,7 @@ var PromoPage = function () {
     this.menuBlock = element.all(by.css(".copy-body"));
 
     this.ticketingInfo = {};
-    this.ticketingInfo.buyButton = element(".purchase-button");
+    this.ticketingInfo.buyButton = element(by.css(".purchase-button"));
 
     this.ticketingInfo.header = element.all(by.css(".ticketing-info .ticketing-header"));
     this.ticketingInfo.copy = element.all(by.css(".ticketing-info .sidebar-copy"));

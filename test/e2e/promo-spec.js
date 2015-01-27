@@ -19,7 +19,7 @@ describe('Promo Page', function() {
     it('should display the "above the fold" section properly', function() {
         // the page title tag matches the main page title displayed in the body
         expect(page.titleTag).toContain("Eat Like a Chef, Drink Like a Sommelier");
-        expect(page.titleBlock.get(0).getText()).toBe("Eat Like a Chef, Drink Like a Sommelier ");
+        expect(page.titleBlock.get(0).getText()).toBe("Eat Like a Chef, Drink Like a Sommelier");
 
         // the info section renders correctly
         expect(page.infoSection.get(0).getText()).toContain("MONDAY, FEBRUARY 23");
