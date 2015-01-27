@@ -46,7 +46,7 @@ var PromoPage = function () {
     this.futureEvents.merchantTitle = element(by.css(".future-events h4"));
 
     this.futureEvents.seriesTitleList = element.all(by.css(".future-events li h4"));
-//    this.futureEvents.eventList = element.all(by.css(".future-events li .future=event-text span"));
+    this.futureEvents.seriesDateList = element.all(by.css(".future-events .future-event-text li"));
 
     this.photoCredit = element.all(by.css(".photo-credit"));
 };

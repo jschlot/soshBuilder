@@ -53,6 +53,7 @@ describe('Promo Page', function() {
     it('should display the "Other Events" section properly', function() {
         expect(page.futureEvents.merchantTitle.getText()).toContain("Stones Throw");
         expect(page.futureEvents.seriesTitleList.get(0).getText()).toBe("Family Style Brunch by Stones Throw");
+        expect(page.futureEvents.seriesDateList.get(0).getText()).toContain("January 26 (SOLD OUT)");
     });
 
 });
