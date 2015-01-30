@@ -19,6 +19,8 @@ var PromoPage = function () {
     this.menuBlock = element.all(by.css(".copy-body"));
 
     this.ticketingInfo = {};
+    this.ticketingInfo.buyButton = element(by.css(".purchase-button"));
+
     this.ticketingInfo.header = element.all(by.css(".ticketing-info .ticketing-header"));
     this.ticketingInfo.copy = element.all(by.css(".ticketing-info .sidebar-copy"));
 
@@ -39,6 +41,12 @@ var PromoPage = function () {
     this.betterWithSosh.texts = element.all(by.css(".better-with-sosh li p"));
     this.betterWithSosh.emailLink = element.all(by.css(".better-with-sosh li p a"));
     this.betterWithSosh.phoneNumber = element.all(by.css(".better-with-sosh>p"));
+
+    this.futureEvents = {};
+    this.futureEvents.merchantTitle = element(by.css(".future-events h4"));
+
+    this.futureEvents.seriesTitleList = element.all(by.css(".future-events li h4"));
+    this.futureEvents.seriesDateList = element.all(by.css(".future-events .future-event-text li"));
 
     this.photoCredit = element.all(by.css(".photo-credit"));
 };
