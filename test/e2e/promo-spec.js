@@ -49,7 +49,6 @@ describe('Promo Page', function() {
     it('should display the Menu section properly', function() {
     });
 
-    // Salar
     it('should display the "Other Events" section properly', function() {
         expect(page.futureEvents.merchantTitle.getText()).toContain("Stones Throw");
         expect(page.futureEvents.seriesTitleList.get(0).getText()).toBe("Family Style Brunch by Stones Throw");
