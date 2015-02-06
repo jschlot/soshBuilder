@@ -60,17 +60,17 @@ events.past = [
 
 /* GET users listing. */
 router.get('/totals', function(req, res, next) {
-    res.send(events.totals);
+    res.json(events.totals);
 });
 
 /* GET users listing. */
 router.get('/upcoming', function(req, res, next) {
-    res.send(events.upcoming);
+    res.json(events.upcoming);
 });
 
 /* GET users listing. */
 router.get('/past', function(req, res, next) {
-    res.send(events.past);
+    res.json(events.past);
 });
 
 
