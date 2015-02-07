@@ -83,6 +83,9 @@ You must edit the files in the "src" directory only, and then build with grunt.
 
 This command is all you need to build your site. Remember, to add new assets, you will need to update the Gruntfile.js.
 
+You can load up your local site at `http://localhost:3000`.
+
+
 
 Starting the Selenium server
 -----
