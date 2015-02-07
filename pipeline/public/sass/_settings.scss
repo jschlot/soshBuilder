@@ -1,0 +1,10 @@
+$neutral-color: #fff;
+
+$primary-color: #008CBA;
+$secondary-color: #ccc;
+
+$default-font: BentonSans,Arial,sans-serif;
+
+@mixin shim-padding() {
+  padding: 1em 0;
+}
