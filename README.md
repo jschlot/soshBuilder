@@ -58,16 +58,16 @@ Next, install Compass:
 Verify Installs
 -----
 
-Try running `/node_modules/protractor/bin/protractor --version` to make sure it's working.
+Try running `./node_modules/.bin/protractor --version` to make sure it's working.
 
-Likewise, try `./node_modules/karma/bin/karma --version` to verify that karma is working.
+Likewise, try `./node_modules/.bin/karma --version` to verify that karma is working.
 
 To test Compass, try `compass version`. You should have 1.0.1 or greater.
 
 The `webdriver-manager` is a helper tool to easily get an instance of a Selenium Server running.
 Use it to download the necessary binaries with:
 
-    ./node_modules/protractor/binwebdriver-manager update
+    ./node_modules/.bin/webdriver-manager update
 
 
 Running the built-in Node server
@@ -89,7 +89,7 @@ soshBuilder's web server has a set of public folders where your HTML and other s
 There is a special folder called "dst", that holds the compressed stylesheets and javascripts.
 You must edit the files in the "src" directory only, and then build with grunt.
 
-    grunt
+    ./node_modules/.bin/grunt
 
 This command is all you need to build your site. Remember, to add new assets, you will need to update the Gruntfile.js.
 
@@ -97,9 +97,9 @@ This command is all you need to build your site. Remember, to add new assets, yo
 Starting the Selenium server
 -----
 
-You will always start up a server with:
+You will always start up a test server with:
 
-    ./node_modules/protractor/webdriver-manager start
+    ./node_modules/.bin/webdriver-manager start
 
 This will start up a Selenium Server and will output a bunch of info logs.
 Your Protractor test will send requests to this server to control a local browser.
@@ -113,11 +113,11 @@ Running Protractor Tests
 
 To run Protractor locally, you will use:
 
-    ./node_modules/protractor/bin/protractor
+    ./node_modules/.bin/protractor
 
 Protractor can run a subset of test code using their `suites` paradigm, e.g.:
 
-    ./node_modules/protractor/bin/protractor --suite promo
+    ./node_modules/.bin/protractor --suite promo
 
 
 Running Karma Tests
@@ -125,5 +125,5 @@ Running Karma Tests
 
 To run Karma locally, you will use:
 
-    ./node_modules/karma/bin/karma start
+    ./node_modules/.bin/karma start
 
