@@ -70,18 +70,6 @@ Use it to download the necessary binaries with:
     ./node_modules/.bin/webdriver-manager update
 
 
-Running the built-in Node server
------
-
-soshBuilder comes with a built in web server to serve up static HTML templates and REST APIs.
-
-To start up the server:
-
-    nodemon pipeline/bin/www
-
-You can load up your local site at `http://localhost:3000`.
-
-
 Building the dst folder
 -----
 
@@ -92,6 +80,18 @@ You must edit the files in the "src" directory only, and then build with grunt.
     ./node_modules/.bin/grunt
 
 This command is all you need to build your site. Remember, to add new assets, you will need to update the Gruntfile.js.
+
+
+Running the built-in Node server
+-----
+
+soshBuilder comes with a built in web server to serve up static HTML templates and REST APIs.
+
+To start up the server:
+
+    nodemon pipeline/bin/www
+
+You can load up your local site at `http://localhost:3000`.
 
 
 Starting the Selenium server
