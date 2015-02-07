@@ -1,5 +1,4 @@
 # these must be installed via npm install
 node_modules
-bower_components
 .DS_Store
-.sass-cache/
+.sass-cache
