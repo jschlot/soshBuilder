@@ -1,0 +1,21 @@
+{
+  "name": "soshBuilder-Pipeline",
+  "version": "1",
+  "homepage": "https://github.com/jschlot/soshBuilder",
+  "authors": [
+    "Jack Schlotthauer <jack.schlotthauer@gmail.com>"
+  ],
+  "description": "soshBuilder's pipeline build",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "pipeline/public/bower/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
+}
