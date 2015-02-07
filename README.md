@@ -25,11 +25,11 @@ Be sure to have ran Xcode at least once to accept it's Terms of Service so you c
 
 To Dos
 -----
-* Tnstall Sass-Doc
-* Try out topcoat-doc
 * Install Live Reload
+* Install Sass-Doc
+* Install topcoat-doc
 * Install JSDoc
-
+* Find something for API documentation
 
 Setup
 -----
