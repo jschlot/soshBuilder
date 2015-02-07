@@ -1,27 +1,28 @@
 /* line 3, ../sass/app.scss */
 h1, h2, h3, h4, h5, h6, p, div, li {
   font-family: BentonSans, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 7, ../sass/app.scss */
+/* line 8, ../sass/app.scss */
 span.count-line {
   color: #008CBA;
   font-weight: normal;
   font-size: 1.4em;
 }
 
-/* line 13, ../sass/app.scss */
+/* line 14, ../sass/app.scss */
 section.shim {
   padding: 1em 0;
 }
 
-/* line 17, ../sass/app.scss */
+/* line 18, ../sass/app.scss */
 .app-top-section {
-  padding: 1em 0;
+  padding: 1.3em;
   background-color: #ccc;
 }
 
-/* line 22, ../sass/app.scss */
+/* line 23, ../sass/app.scss */
 .app-top-section label {
   color: #fff;
 }

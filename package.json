@@ -25,6 +25,7 @@
     "express-generator": "^4.11.1"
   },
   "devDependencies": {
+    "bower": "^1.3.12",
     "grunt-protractor-runner": "^1.2.1",
     "protractor-html-screenshot-reporter": "0.0.19"
   },
