@@ -23,6 +23,14 @@ Check the version of Xcode you have by opening it up and checking the settings. 
 Be sure to have ran Xcode at least once to accept it's Terms of Service so you can proceed.
 
 
+To Dos
+-----
+* Tnstall Sass-Doc
+* Try out topcoat-doc
+* Install Live Reload
+* Install JSDoc
+
+
 Setup
 -----
 
@@ -71,6 +79,8 @@ To start up the server:
 
     nodemon pipeline/bin/www
 
+You can load up your local site at `http://localhost:3000`.
+
 
 Building the dst folder
 -----
@@ -82,9 +92,6 @@ You must edit the files in the "src" directory only, and then build with grunt.
     grunt
 
 This command is all you need to build your site. Remember, to add new assets, you will need to update the Gruntfile.js.
-
-You can load up your local site at `http://localhost:3000`.
-
 
 
 Starting the Selenium server
