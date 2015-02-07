@@ -91,8 +91,11 @@ module.exports = function (grunt) {
             'target': {
                 'files': {
                     'pipeline/public/dst/stylesheets/foundation.min.css': [
-                        'pipeline/src/stylesheets/bower_components/foundation/scss/foundation.css', 
-                        'pipeline/src/stylesheets/site_components/sosh/scss/app.css', 
+                        'pipeline/src/stylesheets/bower_components/foundation/scss/foundation.css'
+                    ],
+                    'pipeline/public/dst/stylesheets/app.min.css': [
+                        'pipeline/src/stylesheets/site_components/sosh/scss/app.css',                        
+                        'pipeline/src/stylesheets/web_fonts/fonts.css'
                     ]
                 }
             }
@@ -113,6 +116,6 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['karma:development','protractor:singlerun']);
     grunt.registerTask('lint', ['jshint:myFiles']);
 
-    grunt.registerTask('build', ['compass:prod','uglify:all','cssmin']);
+    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin']);
 
 };
