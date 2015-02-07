@@ -1,5 +1,5 @@
 {
-  "directory": "bower_components/",
+  "directory": "pipeline/public/assets/bower_components/",
   "analytics": false,
   "timeout": 120000
 }

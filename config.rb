@@ -1,7 +1,7 @@
 preferred_syntax = :sass
 http_path = '/'
 css_dir = 'pipeline/public/stylesheets'
-sass_dir = 'pipeline/public/sass'
+sass_dir = 'pipeline/public/assets'
 images_dir = 'assets/images'
 javascripts_dir = 'pipeline/public/javascripts'
 relative_assets = true
