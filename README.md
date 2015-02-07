@@ -42,6 +42,10 @@ Next, in the directory in which you installed this repo, run the `npm install` c
 
 This will install several command line tools, including `protractor`, `karma`, and `webdriver-manager`.
 
+Next, install Compass:
+
+    gem install compass
+
 
 Verify Installs
 -----
@@ -49,6 +53,8 @@ Verify Installs
 Try running `/node_modules/protractor/bin/protractor --version` to make sure it's working.
 
 Likewise, try `./node_modules/karma/bin/karma --version` to verify that karma is working.
+
+To test Compass, try `compass version`. You should have 1.0.1 or greater.
 
 The `webdriver-manager` is a helper tool to easily get an instance of a Selenium Server running.
 Use it to download the necessary binaries with:
