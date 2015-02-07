@@ -6,4 +6,4 @@ images_dir = 'pipeline/public/dst/images'
 javascripts_dir = 'pipeline/public/dst/avascripts'
 relative_assets = true
 line_comments = true
-# output_style = :compressed
+output_style = :compressed
