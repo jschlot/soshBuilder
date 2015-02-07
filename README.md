@@ -23,6 +23,14 @@ Check the version of Xcode you have by opening it up and checking the settings. 
 Be sure to have ran Xcode at least once to accept it's Terms of Service so you can proceed.
 
 
+To Dos
+-----
+* Install Live Reload
+* Install Sass-Doc
+* Install topcoat-doc
+* Install JSDoc
+* Find something for API documentation
+
 Setup
 -----
 
@@ -60,6 +68,30 @@ The `webdriver-manager` is a helper tool to easily get an instance of a Selenium
 Use it to download the necessary binaries with:
 
     webdriver-manager update
+
+
+Running the built-in Node server
+-----
+
+soshBuilder comes with a built in web server to serve up static HTML templates and REST APIs.
+
+To start up the server:
+
+    nodemon pipeline/bin/www
+
+You can load up your local site at `http://localhost:3000`.
+
+
+Building the dst folder
+-----
+
+soshBuilder's web server has a set of public folders where your HTML and other site assets live.
+There is a special folder called "dst", that holds the compressed stylesheets and javascripts.
+You must edit the files in the "src" directory only, and then build with grunt.
+
+    grunt
+
+This command is all you need to build your site. Remember, to add new assets, you will need to update the Gruntfile.js.
 
 
 Starting the Selenium server
