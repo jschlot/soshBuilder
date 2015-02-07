@@ -26,6 +26,8 @@
   },
   "devDependencies": {
     "bower": "^1.3.12",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-cssmin": "^0.11.0",
     "grunt-protractor-runner": "^1.2.1",
     "protractor-html-screenshot-reporter": "0.0.19"
   },

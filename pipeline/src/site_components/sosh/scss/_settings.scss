@@ -5,6 +5,8 @@ $secondary-color: #ccc;
 
 $default-font: BentonSans,Arial,sans-serif;
 
+$standard-padding: 1.3em;
+
 @mixin shim-padding() {
   padding: 1em 0;
 }
