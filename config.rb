@@ -1,9 +1,12 @@
 preferred_syntax = :sass
-http_path = '/'
-css_dir = 'pipeline/public/dst/stylesheets'
-sass_dir = 'pipeline/src'
-images_dir = 'pipeline/public/dst/images'
-javascripts_dir = 'pipeline/public/dst/javascripts'
 relative_assets = true
-line_comments = false 
-output_style = :compressed
+
+if environment == :development
+    line_comments = true
+    output_style = :expanded
+end
+
+if environment == :production
+    line_comments = false
+    output_style = :compressed
+end 
