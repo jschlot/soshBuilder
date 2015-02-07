@@ -67,7 +67,7 @@ To test Compass, try `compass version`. You should have 1.0.1 or greater.
 The `webdriver-manager` is a helper tool to easily get an instance of a Selenium Server running.
 Use it to download the necessary binaries with:
 
-    webdriver-manager update
+    ./node_modules/protractor/binwebdriver-manager update
 
 
 Running the built-in Node server
@@ -99,7 +99,7 @@ Starting the Selenium server
 
 You will always start up a server with:
 
-    webdriver-manager start
+    ./node_modules/protractor/webdriver-manager start
 
 This will start up a Selenium Server and will output a bunch of info logs.
 Your Protractor test will send requests to this server to control a local browser.
