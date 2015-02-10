@@ -1,7 +1,7 @@
 'use strict';
 
 browser.ignoreSynchronization = true;
-var PromoPage = require('../pages/promo.js'),
+var PromoPage = require('../../pages/promo.js'),
     baseURL = 'san-francisco/marketplace/eat-like-a-chef-0223/m/4c4L/';
 
 describe('Promo Page', function() {
