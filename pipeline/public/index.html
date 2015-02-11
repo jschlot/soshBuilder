@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en"  class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SOSH :: Your Home</title>
+    <meta name="description" content="Demo for bacon flavored components and pages">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/dst/stylesheets/foundation.min.css">
+
+    <!--// START BLOCK: Declare any Stylesheet files to be included here //-->
+    <link rel="stylesheet" href="/dst/stylesheets/app.min.css">
+    <!--// END BLOCK //-->
+
+</head>
+<body>
+    <div class="fixed">
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">Sosh</a></h1>
+                </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li class="divider"></li>
+                    <li><a href="#">Concierge</a></li>
+                    <li class="divider"></li>
+                    <li class="has-form">
+                        <div class="row collapse">
+                            <div class="small-12 columns">
+                                <input type="text" placeholder="Find Stuff">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="has-dropdown">
+                        <a href="#">Jack</a>
+                        <ul class="dropdown">
+                            <li><a href="#">View Profile</a></li>
+                            <li><a href="#">Edit Settings</a></li>
+                            <li><a href="#">Invite Friends</a></li>
+                            <li><a href="#">Send Feedback</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Left Nav Section -->
+                <ul class="left">
+                    <li class="divider"></li>
+                    <li class="has-dropdown">
+                        <a href="#">San Francisco</a>
+                        <ul class="dropdown">
+                            <li><a href="#">New York City</a></li>
+                            <li><a href="#">Washington, DC</a></li>
+                            <li><a href="#">Seattle</a></li>
+                            <li><a href="#">Chicago</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+
+    <section class="shim">
+        <div class="row">
+            <div class="small-12 columns">
+                <h2 class="subheader">I'm looking for <a href="#">all activities</a> in <a href="#">San Francisco</a>.</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-top-section">
+        <div class="row">
+            <div class="small-6 columns">
+                <label><b>1217 RESULTS</b></label>
+            </div>
+            <div class="small-6 columns">
+                <label class="float right"><b>SORT BY</b></label>
+                <select></select>
+            </div>
+        </div>
+    </section>
+
+    <section class="shim">
+        <div class="row">
+            <div class="small-12 columns">
+                  <span class="count-line">24 New Activities on Sosh</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/dst/javascripts/foundation.min.js"></script>
+    <script src="/dst/javascripts/angular.min.js"></script>
+
+    <!--// START BLOCK: Declare any Javascript files to be included here //-->
+
+    <!--// END BLOCK //-->
+
+    <script>
+        $(document).foundation();
+    </script>
+
+
+</body>
+</html>

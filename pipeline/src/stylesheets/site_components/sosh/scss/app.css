@@ -1,0 +1,28 @@
+/* line 3, ../../../../site_components/sosh/scss/app.scss */
+h1, h2, h3, h4, h5, h6, p, div, li {
+  font-family: BentonSans, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 8, ../../../../site_components/sosh/scss/app.scss */
+span.count-line {
+  color: #008CBA;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+/* line 14, ../../../../site_components/sosh/scss/app.scss */
+section.shim {
+  padding: 1em 0;
+}
+
+/* line 18, ../../../../site_components/sosh/scss/app.scss */
+.app-top-section {
+  padding: 1.3em;
+  background-color: #ccc;
+}
+
+/* line 23, ../../../../site_components/sosh/scss/app.scss */
+.app-top-section label {
+  color: #fff;
+}

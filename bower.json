@@ -1,0 +1,24 @@
+{
+  "name": "soshBuilder-Pipeline",
+  "version": "1",
+  "homepage": "https://github.com/jschlot/soshBuilder",
+  "authors": [
+    "Jack Schlotthauer <jack.schlotthauer@gmail.com>"
+  ],
+  "description": "soshBuilder's pipeline build",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1",
+    "angular": "1.3.11",
+    "angular-loader": "1.3.11",
+    "angular-route": "1.3.11",
+    "angular-sanitize": "1.3.11"
+  }
+}
