@@ -2,7 +2,7 @@ var HtmlReporter = require('protractor-html-screenshot-reporter');
 
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    baseUrl: "http://tapir:chantek@jack.tapir.offlinelabs.com",
+    baseUrl: "http://ami:chantek@ami.hippo.offlinelabs.com",
     multiCapabilities: [{
         'browserName': 'chrome'
     }, {
