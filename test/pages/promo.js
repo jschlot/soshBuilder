@@ -4,9 +4,21 @@ var PromoPage = function () {
 
     this.titleTag = browser.getTitle();
     this.titleBlock = element.all(by.css(".title-box h1"));
+    // this.infoSection = element.all(by.css(".info-section li"));
+    // this.infoSectionIcons = element.all(by.css(".info-section li .info-img img"));
+    this.infoSection = element.all(by.css(".date-venue-price-wrapper li"));
+    this.infoSectionIcons = element.all(by.css(".date-venue-price-wrapper li .icon-wrapper img"));
 
-    this.infoSection = element.all(by.css(".info-section li"));
-    this.infoSectionIcons = element.all(by.css(".info-section li .info-img img"));
+    //// Multiple Date Dropdown
+    this.dateOptions = {};
+    this.dateOptions.list = element.all(by.css(".date-time-text .date-list .date-info"));
+    this.dateOptions.selected = {};
+    this.dateOptions.selected.box = element(by.css('.dropdown-items-visible'));
+    this.dateOptions.selected.date = element(by.css('.dropdown-items-visible h4'));
+    this.dateOptions.selected.time = element(by.css('.dropdown-items-visible .date-venue-price-details'));
+    this.dateOptions.selected.arrow = element(by.css('.dropdown-items-visible .icon-down'));
+
+
 
     this.bulletPoints = element.all(by.css(".bullet-point li"));
     this.bulletPointIcons = element.all(by.css(".bullet-point li .icon"));
