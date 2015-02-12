@@ -17,7 +17,8 @@ exports.config = {
         ],
         login: 'test/e2e/login-spec.js',
         promo: [
-            'test/e2e/promo/init-spec.js'
+            // 'test/e2e/promo/init-spec.js'
+            'test/e2e/promo/series-spec.js'
         ],
         home: 'test/e2e/home-spec.js',
         checkout: [
