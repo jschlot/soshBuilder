@@ -48,10 +48,11 @@ var PromoPage = function () {
     this.dateOptions = {};
     this.dateOptions.list = element.all(by.css(".date-time-text .date-list .date-info"));
     this.dateOptions.selected = {};
-    this.dateOptions.selected.box = element(by.css('.dropdown-items-visible'));
-    this.dateOptions.selected.date = element(by.css('.dropdown-items-visible h4'));
-    this.dateOptions.selected.time = element(by.css('.dropdown-items-visible .date-venue-price-details'));
-    this.dateOptions.selected.arrow = element(by.css('.dropdown-items-visible .icon-down'));
+    this.dateOptions.selected.box = element(by.css(".dropdown-items-visible"));
+    this.dateOptions.selected.hasSelector = element.all(by.css(".event-sold-out")).get(0);
+    this.dateOptions.selected.date = element(by.css(".dropdown-items-visible h4"));
+    this.dateOptions.selected.time = element(by.css(".dropdown-items-visible .date-venue-price-details"));
+    this.dateOptions.selected.arrow = element(by.css(".dropdown-items-visible .icon-down"));
 
     this.futureEvents = {};
     this.futureEvents.merchantTitle = element(by.css(".merchant-future-events h4"));
