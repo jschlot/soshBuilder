@@ -1,8 +1,10 @@
-var HtmlReporter = require('protractor-html-screenshot-reporter');
+var HtmlReporter = require('protractor-html-screenshot-reporter'),
+    paths = require('./paths.js'),
+    baseURLPath = paths('integration');
 
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    baseUrl: "http://tapir:chantek@jack.tapir.offlinelabs.com",
+    baseUrl: baseURLPath,
     multiCapabilities: [
         {
             'browserName': 'chrome'
@@ -37,7 +39,7 @@ exports.config = {
         ]
     },
     onPrepare: function() {
-        // Add a reporter and store screenshots to `screnshots`:
+        // Add a reporter and store screenshots to `screenshots`:
         jasmine.getEnv().addReporter(new HtmlReporter({
             baseDirectory: 'screenshots'
         }));

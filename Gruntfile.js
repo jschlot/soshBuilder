@@ -110,7 +110,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('default', ['jshint:myFiles','compass:dev','uglify:all']);
     grunt.registerTask('unit', ['karma:development']);
     grunt.registerTask('e2e', ['protractor:singlerun']);
     grunt.registerTask('test', ['karma:development','protractor:singlerun']);
