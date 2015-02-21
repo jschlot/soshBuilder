@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SOSH :: Your Home</title>
+    <title>fed dev tools</title>
     <meta name="description" content="Demo for bacon flavored components and pages">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,68 +17,16 @@
     <!--// END BLOCK //-->
 
 </head>
-<body>
+<body ng-app="navigation">
     <div class="fixed">
-        <nav class="top-bar" data-topbar role="navigation">
-            <ul class="title-area">
-                <li class="name">
-                    <h1><a href="#">kitchen sink</a></h1>
-                </li>
-                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-            </ul>
-
-            <section class="top-bar-section">
-                <!-- Left Nav Section -->
-                <ul class="left">
-                    <li class="divider"></li>
-                    <li class="has-dropdown">
-                        <a href="#styles">styles</a>
-                        <ul class="dropdown">
-                            <li><a href="#styles.color">color</a></li>
-                            <li><a href="#styles.helpers">helpers</a></li>
-                            <li><a href="#styles.icons">icons</a></li>
-                            <li><a href="#styles.typography">typography</a></li>
-                        </ul>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="has-dropdown">
-                        <a href="#blocks">blocks</a>
-                        <ul class="dropdown">
-                            <li><a href="#blocks.badges">badges</a></li>
-                            <li><a href="#blocks.buttons">buttons</a></li>
-                            <li><a href="#blocks.cards">cards</a></li>
-                            <li><a href="#blocks.collections">collections</a></li>
-                            <li><a href="#blocks.dropdowns">dropdowns</a></li>
-                            <li><a href="#blocks.forms">forms</a></li>
-                        </ul>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="has-dropdown">
-                        <a href="#directives">directives</a>
-                        <ul class="dropdown">
-                            <li><a href="#directives.multidatecardset">multi-date cardset</a></li>
-                        </ul>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="has-dropdown">
-                        <a href="#services">rest services</a>
-                        <ul class="dropdown">
-                            <li><a href="#services.eventcollections">event collections</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="divider"></li>
-                </ul>
-            </section>
-        </nav>
+        <top-nav-bar></top-nav-bar>        
     </div>
 
     <script src="/dst/javascripts/foundation.min.js"></script>
     <script src="/dst/javascripts/angular.min.js"></script>
 
     <!--// START BLOCK: Declare any Javascript files to be included here //-->
-
+    <script src="/dst/javascripts/devtools.min.js"></script>
     <!--// END BLOCK //-->
 
     <script>

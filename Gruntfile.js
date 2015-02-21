@@ -88,12 +88,15 @@ module.exports = function (grunt) {
                         'pipeline/src/bower_components/angular/angular.min.js',
                         'pipeline/src/bower_components/angular-loader/angular-loader.min.js',
                         'pipeline/src/bower_components/angular-route/angular-route.min.js',
-                        'pipeline/src/bower_components/angular-sanitize/angular-sanitize.min.js',
+                        'pipeline/src/bower_components/angular-sanitize/angular-sanitize.min.js'
                     ],
                     'pipeline/public/dst/javascripts/foundation.min.js': [
                         'pipeline/src/bower_components/jquery/dist/jquery.min.js',
                         'pipeline/src/bower_components/foundation/js/foundation.min.js',
-                        'pipeline/src/bower_components/foundation/js/foundation.topbar.min.js',
+                        'pipeline/src/bower_components/foundation/js/foundation.topbar.min.js'
+                    ],
+                    'pipeline/public/dst/javascripts/devtools.min.js': [
+                        'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js'
                     ]
     	    	}
     	    },
@@ -125,7 +128,21 @@ module.exports = function (grunt) {
     	            'proxy': "localhost:3000"
     	        }
     	    }
-	   }
+	   },
+       'htmlmin': {
+            'dist': {
+              'options': {
+                'removeComments': true,
+                'collapseWhitespace': true
+              },
+              'files': [
+                { 
+                    'src': './pipeline/src/site_components/sosh/scripts/directives/navigation/template.html',
+                    'dest': './pipeline/public/dst/javascripts/templates/navigation/template.html'
+                }
+              ]
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -137,12 +154,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-express-server');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask('unit', ['karma:development']);
     grunt.registerTask('e2e', ['protractor:singlerun']);
     grunt.registerTask('test', ['karma:development','protractor:singlerun']);
     grunt.registerTask('lint', ['jshint:myFiles']);
 
-    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'browserSync', 'watch']);
 
 };
