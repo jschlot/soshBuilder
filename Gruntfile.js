@@ -10,6 +10,17 @@ module.exports = function (grunt) {
             ]
         },
 
+    	'express': {
+    	    'options': {
+    	      // Override defaults here
+    	    },
+    	    'dev': {
+    	      'options': {
+    	        'script': 'pipeline/app.js'
+    	      }
+    	    }
+    	},
+
         'karma': {
             'development': {
                 'configFile': 'karma.conf.js',
@@ -45,7 +56,7 @@ module.exports = function (grunt) {
     	'watch': {
     	    'compass': {
         		'files': ['pipeline/src/**/*.{scss,sass}'],
-        		'tasks': ['compass:dev']
+        		'tasks': ['compass:dev','cssmin']
     	    },
      	    'js': {
         		'files': ['pipeline/src/**/*.js'],
@@ -99,7 +110,22 @@ module.exports = function (grunt) {
                     ]
                 }
             }
-        }
+        },
+    	'browserSync': {
+    	    'dev': {
+    	        'bsFiles': {
+    	           'src': [
+        			'pipeline/public/dst/stylesheets/*.css',
+        			'pipeline/public/dst/javascripts/*.js',
+        			'pipeline/public/*.html',
+    		      ]
+    	        },
+    	        'options': {
+    		        'watchTask': true,
+    	            'proxy': "localhost:3000"
+    	        }
+    	    }
+	   }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -109,12 +135,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-express-server');
 
     grunt.registerTask('unit', ['karma:development']);
     grunt.registerTask('e2e', ['protractor:singlerun']);
     grunt.registerTask('test', ['karma:development','protractor:singlerun']);
     grunt.registerTask('lint', ['jshint:myFiles']);
 
-    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin']);
+    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin', 'browserSync', 'watch']);
 
 };
