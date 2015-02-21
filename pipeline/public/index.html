@@ -17,16 +17,17 @@
     <!--// END BLOCK //-->
 
 </head>
-<body ng-app="navigation">
+<body ng-app="feddevtools">
     <div class="fixed">
         <top-nav-bar></top-nav-bar>        
     </div>
-
+    <section class="shim" ng-view>
+    </section>
     <script src="/dst/javascripts/foundation.min.js"></script>
     <script src="/dst/javascripts/angular.min.js"></script>
 
     <!--// START BLOCK: Declare any Javascript files to be included here //-->
-    <script src="/dst/javascripts/devtools.min.js"></script>
+    <script src="/dst/javascripts/navigation.min.js"></script>
     <!--// END BLOCK //-->
 
     <script>

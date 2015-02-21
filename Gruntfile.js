@@ -52,7 +52,21 @@ module.exports = function (grunt) {
         'jshint': {
             'myFiles': ['source/*.js']
         },
-
+        'browserSync': {
+            'dev': {
+                'bsFiles': {
+                   'src': [
+                    'pipeline/public/dst/stylesheets/*.css',
+                    'pipeline/public/dst/javascripts/*.js',
+                    'pipeline/public/*.html',
+                  ]
+                },
+                'options': {
+                    'watchTask': true,
+                    'proxy': "localhost:3000"
+                }
+            }
+        },
     	'watch': {
     	    'compass': {
         		'files': ['pipeline/src/**/*.{scss,sass}'],
@@ -95,7 +109,7 @@ module.exports = function (grunt) {
                         'pipeline/src/bower_components/foundation/js/foundation.min.js',
                         'pipeline/src/bower_components/foundation/js/foundation.topbar.min.js'
                     ],
-                    'pipeline/public/dst/javascripts/devtools.min.js': [
+                    'pipeline/public/dst/javascripts/navigation.min.js': [
                         'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js'
                     ]
     	    	}
@@ -114,21 +128,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-    	'browserSync': {
-    	    'dev': {
-    	        'bsFiles': {
-    	           'src': [
-        			'pipeline/public/dst/stylesheets/*.css',
-        			'pipeline/public/dst/javascripts/*.js',
-        			'pipeline/public/*.html',
-    		      ]
-    	        },
-    	        'options': {
-    		        'watchTask': true,
-    	            'proxy': "localhost:3000"
-    	        }
-    	    }
-	   },
        'htmlmin': {
             'dist': {
               'options': {
@@ -137,8 +136,12 @@ module.exports = function (grunt) {
               },
               'files': [
                 { 
-                    'src': './pipeline/src/site_components/sosh/scripts/directives/navigation/template.html',
-                    'dest': './pipeline/public/dst/javascripts/templates/navigation/template.html'
+                    'src': 'pipeline/src/site_components/sosh/scripts/directives/navigation/template.html',
+                    'dest': 'pipeline/public/dst/javascripts/templates/navigation/template.html'
+                },
+                { 
+                    'src': 'pipeline/src/site_components/sosh/scripts/pages/colors.html',
+                    'dest': 'pipeline/public/dst/javascripts/templates/colors/template.html'
                 }
               ]
             }

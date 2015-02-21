@@ -1,5 +1,5 @@
 angular
-	.module('navigation', [])
+	.module('feddevtools', ['ngRoute'])
 	.directive('topNavBar',
         [ 	// insertion here
             function(){
@@ -26,4 +26,18 @@ angular
                 };
             }
         ]
-    );
+    )
+    .controller('formsController',
+        ['$scope',
+            function ($scope) {
+                $scope.message = "Venue Name";
+            }
+        ]
+    )
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider
+            .when('/colors', {
+                templateUrl : '/dst/javascripts/templates/colors/template.html',
+                controller: 'formsController'
+            });
+    }]);

@@ -3,3 +3,8 @@ h1, h2, h3, h4, h5, h6, p, div, li {
   font-family: BentonSans, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* line 8, ../../../../site_components/sosh/scss/app.scss */
+.shim {
+  margin: 4em;
+}
