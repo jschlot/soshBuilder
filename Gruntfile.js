@@ -138,20 +138,10 @@ module.exports = function (grunt) {
                 'removeComments': true,
                 'collapseWhitespace': true
               },
-              'files': [
-                { 
-                    'src': 'pipeline/src/site_components/sosh/scripts/directives/navigation/template.html',
-                    'dest': 'pipeline/public/dst/javascripts/templates/navigation/template.html'
-                },
-                  {
-                      'src': 'pipeline/src/site_components/sosh/scripts/pages/colors.html',
-                      'dest': 'pipeline/public/dst/javascripts/templates/colors/template.html'
-                  },
-                  {
-                      'src': 'pipeline/src/site_components/sosh/scripts/pages/cards.html',
-                      'dest': 'pipeline/public/dst/javascripts/templates/cards/template.html'
-                  }
-              ]
+              expand: true,
+              cwd: 'pipeline/src/site_components/sosh/scripts/',
+              src: ['**/**/*.html'],
+              dest: 'pipeline/public/dst/javascripts/templates/'
             }
         }
     });

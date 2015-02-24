@@ -6,6 +6,7 @@
 
 .dark-bg {
   background-color: $dark-color;
+  color: $neutral-color;
 }
 
 .alt-bg {
@@ -14,6 +15,7 @@
 
 .border-bg {
   background-color: $border-color;
+  color: $neutral-color;
 }
 
 .blue-bg {
@@ -22,6 +24,7 @@
 
 .blue-dark-bg {
   background-color: $background-blue-dark-color;
+  color: $neutral-color;
 }
 
 .gold-bg {
@@ -30,6 +33,7 @@
 
 .gold-dark-bg {
   background-color: $background-gold-dark-color;
+  color: $neutral-color;
 }
 
 .purple-bg {
@@ -38,6 +42,7 @@
 
 .purple-dark-bg {
   background-color: $background-purple-dark-color;
+  color: $neutral-color;
 }
 
 .red-bg {
@@ -46,6 +51,7 @@
 
 .red-dark-bg {
   background-color: $background-red-dark-color;
+  color: $neutral-color;
 }
 
 .teal-bg {
@@ -54,6 +60,7 @@
 
 .teal-dark-bg {
   background-color: $background-teal-dark-color;
+  color: $neutral-color;
 }
 
 
@@ -62,19 +69,17 @@ h1,h2,h3,h4,h5,h6,p,div, li {
   -webkit-font-smoothing: antialiased;
 }
 
-section section {
-  padding: 1em 0;
-}
 
 .shim {
-	margin: 2em 0;
+	padding: 3em 0;
 }
-
 
 //// BEM Here down
 .b-swatch {
   height: 5em;
   width: 5em;
+  display: inline-flex;
+  align-content: center;
 }
 
 .b-markup {
@@ -130,6 +135,7 @@ section section {
 }
 
 .e-stub-strip {
+  margin: 5px;
   display: inline-flex;
   width: 100%;
 }
@@ -175,7 +181,6 @@ section section {
 .e-paging-button.disabled:hover {
   background-color: $neutral-color;
 }
-
 
 .e-date {
   font-size: 13px;

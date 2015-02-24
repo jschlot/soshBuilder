@@ -21,7 +21,7 @@ angular
                     controller: controller,
                     scope: {
                     },
-                    templateUrl: '/dst/javascripts/templates/navigation/template.html',
+                    templateUrl: '/dst/javascripts/templates/directives/navigation/template.html',
                     link: linkingFunction
                 };
             }
@@ -36,11 +36,15 @@ angular
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/cards', {
-                templateUrl : '/dst/javascripts/templates/cards/template.html',
+                templateUrl : '/dst/javascripts/templates/pages/cards.html',
+                controller: 'dummyController'
+            })
+            .when('/typography', {
+                templateUrl : '/dst/javascripts/templates/pages/typography.html',
                 controller: 'dummyController'
             })
             .when('/colors', {
-                templateUrl : '/dst/javascripts/templates/colors/template.html',
+                templateUrl : '/dst/javascripts/templates/pages/colors.html',
                 controller: 'dummyController'
             });
     }]);
