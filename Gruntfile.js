@@ -143,6 +143,14 @@ module.exports = function (grunt) {
               src: ['**/**/*.html'],
               dest: 'pipeline/public/dst/javascripts/templates/'
             }
+        },
+        copy: {
+            main: {
+                files: [
+                    // flattens results to a single level
+                    {expand: true, flatten: true, src: ['pipeline/src/images/**'], dest: 'pipeline/public/dst/images/', filter: 'isFile'},
+                ]
+            }
         }
     });
 
@@ -156,6 +164,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('unit', ['karma:development']);
     grunt.registerTask('e2e', ['protractor:singlerun']);
