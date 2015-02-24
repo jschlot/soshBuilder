@@ -48,7 +48,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         'jshint': {
             'myFiles': ['source/*.js']
         },
@@ -56,10 +55,11 @@ module.exports = function (grunt) {
             'dev': {
                 'bsFiles': {
                    'src': [
-                    'pipeline/public/dst/stylesheets/*.css',
-                    'pipeline/public/dst/javascripts/*.js',
-                    'pipeline/public/*.html',
-                  ]
+                        'pipeline/public/dst/stylesheets/*.css',
+                        'pipeline/public/dst/javascripts/*.js',
+                        'pipeline/public/dst/javascripts/templates/*/*.html',
+                        'pipeline/public/*.html',
+                   ]
                 },
                 'options': {
                     'watchTask': true,
@@ -72,10 +72,14 @@ module.exports = function (grunt) {
         		'files': ['pipeline/src/**/*.{scss,sass}'],
         		'tasks': ['compass:dev','cssmin']
     	    },
-     	    'js': {
-        		'files': ['pipeline/src/**/*.js'],
-        		'tasks': ['uglify']
-    	    }
+            'js': {
+                'files': ['pipeline/src/**/*.js'],
+                'tasks': ['uglify']
+            },
+            'html': {
+                'files': ['pipeline/src/**/*.html'],
+                'tasks': ['htmlmin:dist']
+            }
     	},
     	'compass': {
     	    'dev': {
@@ -113,7 +117,7 @@ module.exports = function (grunt) {
                         'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js'
                     ]
     	    	}
-    	    },
+    	    }
     	},
         'cssmin': {
             'target': {
@@ -139,10 +143,14 @@ module.exports = function (grunt) {
                     'src': 'pipeline/src/site_components/sosh/scripts/directives/navigation/template.html',
                     'dest': 'pipeline/public/dst/javascripts/templates/navigation/template.html'
                 },
-                { 
-                    'src': 'pipeline/src/site_components/sosh/scripts/pages/colors.html',
-                    'dest': 'pipeline/public/dst/javascripts/templates/colors/template.html'
-                }
+                  {
+                      'src': 'pipeline/src/site_components/sosh/scripts/pages/colors.html',
+                      'dest': 'pipeline/public/dst/javascripts/templates/colors/template.html'
+                  },
+                  {
+                      'src': 'pipeline/src/site_components/sosh/scripts/pages/cards.html',
+                      'dest': 'pipeline/public/dst/javascripts/templates/cards/template.html'
+                  }
               ]
             }
         }

@@ -5,6 +5,141 @@ h1,h2,h3,h4,h5,h6,p,div, li {
   -webkit-font-smoothing: antialiased;
 }
 
+section section {
+  padding: 1em 0;
+}
+
 .shim {
-	margin: 4em;
+	margin: 2em 0;
+}
+
+.markup {
+  margin-top: 2.6em;
+}
+
+.markup:before {
+  position: relative;
+  padding: 0px 4px;
+  background: #e8e6e3;
+  top: 1.3em;
+  left: .1em;
+  -webkit-font-smoothing: antialiased;
+  color: #555;
+  content: attr(class);
+  font-size: 0.9rem;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  border-top: none;
+  border-left: none;
+}
+
+.primary-bg {
+  background-color: $neutral-color;
+}
+
+.alt-bg {
+  background-color: $alt-zebra-color;
+}
+
+
+//// BEM Here down
+
+.b-snippet {
+  overflow: scroll;
+  border: 1px solid #ccc;
+  background-color: $neutral-color
+
+}
+
+.b-card-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.b-card-list a {
+  cursor: pointer;
+}
+
+.b-card-list li {
+  background-color: #ccc;
+  margin: 5px;
+  padding: 1px;
+  display: inline-block;
+}
+
+.b-card {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.e-event-image {
+  width: 330px;
+  height: 220px;
+}
+
+.e-stub-strip {
+  display: inline-flex;
+  width: 100%;
+}
+
+.e-stub {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 0;
+  padding: 8px 4px;
+}
+
+.e-stub:hover {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.e-description {
+  margin: 5px;
+  height: 3em;
+  font-size: 18px;
+  font-family: "BentonSans Medium",Arial,sans-serif;
+  font-weight: 500;
+  width: 320px;
+  overflow: hidden;
+}
+
+.e-paging-button {
+  display: inline-flex;
+  border: 0;
+  background-color: #fff;
+  height: 2em;
+  margin: 0;
+  padding: 8px 4px;
+  align-items: center;
+}
+
+.e-paging-button:hover {
+  background-color: #eee;
+}
+
+.e-paging-button.disabled {
+  opacity: .30;
+}
+
+.e-paging-button.disabled:hover {
+  background-color: #fff;
+}
+
+
+.e-date {
+  font-size: 13px;
+}
+
+.e-stub:hover .e-date {
+  font-weight: bold
+}
+
+.e-quantity {
+  font-size: 12px;
+}
+
+.e-quantity.sold-out {
+  color: #E56C69;
 }

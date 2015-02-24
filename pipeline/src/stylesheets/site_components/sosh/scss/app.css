@@ -5,6 +5,159 @@ h1, h2, h3, h4, h5, h6, p, div, li {
 }
 
 /* line 8, ../../../../site_components/sosh/scss/app.scss */
+section section {
+  padding: 1em 0;
+}
+
+/* line 12, ../../../../site_components/sosh/scss/app.scss */
 .shim {
-  margin: 4em;
+  margin: 2em 0;
+}
+
+/* line 16, ../../../../site_components/sosh/scss/app.scss */
+.markup {
+  margin-top: 2.6em;
+}
+
+/* line 20, ../../../../site_components/sosh/scss/app.scss */
+.markup:before {
+  position: relative;
+  padding: 0px 4px;
+  background: #e8e6e3;
+  top: 1.3em;
+  left: .1em;
+  -webkit-font-smoothing: antialiased;
+  color: #555;
+  content: attr(class);
+  font-size: 0.9rem;
+  border: solid 1px rgba(51, 51, 51, 0.12);
+  border-top: none;
+  border-left: none;
+}
+
+/* line 35, ../../../../site_components/sosh/scss/app.scss */
+.primary-bg {
+  background-color: #ffffff;
+}
+
+/* line 39, ../../../../site_components/sosh/scss/app.scss */
+.alt-bg {
+  background-color: #eeeeee;
+}
+
+/* line 46, ../../../../site_components/sosh/scss/app.scss */
+.b-snippet {
+  overflow: scroll;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+/* line 53, ../../../../site_components/sosh/scss/app.scss */
+.b-card-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 59, ../../../../site_components/sosh/scss/app.scss */
+.b-card-list a {
+  cursor: pointer;
+}
+
+/* line 63, ../../../../site_components/sosh/scss/app.scss */
+.b-card-list li {
+  background-color: #ccc;
+  margin: 5px;
+  padding: 1px;
+  display: inline-block;
+}
+
+/* line 70, ../../../../site_components/sosh/scss/app.scss */
+.b-card {
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* line 75, ../../../../site_components/sosh/scss/app.scss */
+.e-event-image {
+  width: 330px;
+  height: 220px;
+}
+
+/* line 80, ../../../../site_components/sosh/scss/app.scss */
+.e-stub-strip {
+  display: inline-flex;
+  width: 100%;
+}
+
+/* line 85, ../../../../site_components/sosh/scss/app.scss */
+.e-stub {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 0;
+  padding: 8px 4px;
+}
+
+/* line 93, ../../../../site_components/sosh/scss/app.scss */
+.e-stub:hover {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* line 98, ../../../../site_components/sosh/scss/app.scss */
+.e-description {
+  margin: 5px;
+  height: 3em;
+  font-size: 18px;
+  font-family: "BentonSans Medium",Arial,sans-serif;
+  font-weight: 500;
+  width: 320px;
+  overflow: hidden;
+}
+
+/* line 108, ../../../../site_components/sosh/scss/app.scss */
+.e-paging-button {
+  display: inline-flex;
+  border: 0;
+  background-color: #fff;
+  height: 2em;
+  margin: 0;
+  padding: 8px 4px;
+  align-items: center;
+}
+
+/* line 118, ../../../../site_components/sosh/scss/app.scss */
+.e-paging-button:hover {
+  background-color: #eee;
+}
+
+/* line 122, ../../../../site_components/sosh/scss/app.scss */
+.e-paging-button.disabled {
+  opacity: .30;
+}
+
+/* line 126, ../../../../site_components/sosh/scss/app.scss */
+.e-paging-button.disabled:hover {
+  background-color: #fff;
+}
+
+/* line 131, ../../../../site_components/sosh/scss/app.scss */
+.e-date {
+  font-size: 13px;
+}
+
+/* line 135, ../../../../site_components/sosh/scss/app.scss */
+.e-stub:hover .e-date {
+  font-weight: bold;
+}
+
+/* line 139, ../../../../site_components/sosh/scss/app.scss */
+.e-quantity {
+  font-size: 12px;
+}
+
+/* line 143, ../../../../site_components/sosh/scss/app.scss */
+.e-quantity.sold-out {
+  color: #E56C69;
 }

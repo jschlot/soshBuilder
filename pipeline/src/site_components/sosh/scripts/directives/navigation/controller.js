@@ -27,17 +27,20 @@ angular
             }
         ]
     )
-    .controller('formsController',
+    .controller('dummyController',
         ['$scope',
             function ($scope) {
-                $scope.message = "Venue Name";
             }
         ]
     )
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
+            .when('/cards', {
+                templateUrl : '/dst/javascripts/templates/cards/template.html',
+                controller: 'dummyController'
+            })
             .when('/colors', {
                 templateUrl : '/dst/javascripts/templates/colors/template.html',
-                controller: 'formsController'
+                controller: 'dummyController'
             });
     }]);
