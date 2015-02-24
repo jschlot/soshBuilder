@@ -1,5 +1,62 @@
 @import "settings";
 
+.primary-bg {
+  background-color: $neutral-color;
+}
+
+.dark-bg {
+  background-color: $dark-color;
+}
+
+.alt-bg {
+  background-color: $alt-color;
+}
+
+.border-bg {
+  background-color: $border-color;
+}
+
+.blue-bg {
+  background-color: $background-blue-color;
+}
+
+.blue-dark-bg {
+  background-color: $background-blue-dark-color;
+}
+
+.gold-bg {
+  background-color: $background-gold-color;
+}
+
+.gold-dark-bg {
+  background-color: $background-gold-dark-color;
+}
+
+.purple-bg {
+  background-color: $background-purple-color;
+}
+
+.purple-dark-bg {
+  background-color: $background-purple-dark-color;
+}
+
+.red-bg {
+  background-color: $background-red-color;
+}
+
+.red-dark-bg {
+  background-color: $background-red-dark-color;
+}
+
+.teal-bg {
+  background-color: $background-teal-color;
+}
+
+.teal-dark-bg {
+  background-color: $background-teal-dark-color;
+}
+
+
 h1,h2,h3,h4,h5,h6,p,div, li {
   font-family:$default-font;
   -webkit-font-smoothing: antialiased;
@@ -13,11 +70,18 @@ section section {
 	margin: 2em 0;
 }
 
-.markup {
+
+//// BEM Here down
+.b-swatch {
+  height: 5em;
+  width: 5em;
+}
+
+.b-markup {
   margin-top: 2.6em;
 }
 
-.markup:before {
+.b-markup:before {
   position: relative;
   padding: 0px 4px;
   background: #e8e6e3;
@@ -31,17 +95,6 @@ section section {
   border-top: none;
   border-left: none;
 }
-
-.primary-bg {
-  background-color: $neutral-color;
-}
-
-.alt-bg {
-  background-color: $alt-zebra-color;
-}
-
-
-//// BEM Here down
 
 .b-snippet {
   overflow: scroll;
@@ -60,16 +113,15 @@ section section {
   cursor: pointer;
 }
 
-.b-card-list li {
-  background-color: #ccc;
+.b-card {
+  background-color: $border-color;
   margin: 5px;
   padding: 1px;
   display: inline-block;
 }
 
-.b-card {
+.e-card-content {
   padding: 10px;
-  background-color: #fff;
 }
 
 .e-event-image {
@@ -91,7 +143,6 @@ section section {
 }
 
 .e-stub:hover {
-  background-color: #eee;
   border-radius: 5px;
 }
 
@@ -99,7 +150,6 @@ section section {
   margin: 5px;
   height: 3em;
   font-size: 18px;
-  font-family: "BentonSans Medium",Arial,sans-serif;
   font-weight: 500;
   width: 320px;
   overflow: hidden;
@@ -108,7 +158,6 @@ section section {
 .e-paging-button {
   display: inline-flex;
   border: 0;
-  background-color: #fff;
   height: 2em;
   margin: 0;
   padding: 8px 4px;
@@ -116,7 +165,7 @@ section section {
 }
 
 .e-paging-button:hover {
-  background-color: #eee;
+  background-color: $alt-color;
 }
 
 .e-paging-button.disabled {
@@ -124,7 +173,7 @@ section section {
 }
 
 .e-paging-button.disabled:hover {
-  background-color: #fff;
+  background-color: $neutral-color;
 }
 
 

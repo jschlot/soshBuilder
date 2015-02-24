@@ -1,26 +1,102 @@
 /* line 3, ../../../../site_components/sosh/scss/app.scss */
+.primary-bg {
+  background-color: #FFFFFF;
+}
+
+/* line 7, ../../../../site_components/sosh/scss/app.scss */
+.dark-bg {
+  background-color: #333333;
+}
+
+/* line 11, ../../../../site_components/sosh/scss/app.scss */
+.alt-bg {
+  background-color: #EEEEEE;
+}
+
+/* line 15, ../../../../site_components/sosh/scss/app.scss */
+.border-bg {
+  background-color: #CCCCCC;
+}
+
+/* line 19, ../../../../site_components/sosh/scss/app.scss */
+.blue-bg {
+  background-color: #4583B1;
+}
+
+/* line 23, ../../../../site_components/sosh/scss/app.scss */
+.blue-dark-bg {
+  background-color: #2A5676;
+}
+
+/* line 27, ../../../../site_components/sosh/scss/app.scss */
+.gold-bg {
+  background-color: #DBA571;
+}
+
+/* line 31, ../../../../site_components/sosh/scss/app.scss */
+.gold-dark-bg {
+  background-color: #AF845A;
+}
+
+/* line 35, ../../../../site_components/sosh/scss/app.scss */
+.purple-bg {
+  background-color: #8C5D79;
+}
+
+/* line 39, ../../../../site_components/sosh/scss/app.scss */
+.purple-dark-bg {
+  background-color: #704A61;
+}
+
+/* line 43, ../../../../site_components/sosh/scss/app.scss */
+.red-bg {
+  background-color: #E56C69;
+}
+
+/* line 47, ../../../../site_components/sosh/scss/app.scss */
+.red-dark-bg {
+  background-color: #B75654;
+}
+
+/* line 51, ../../../../site_components/sosh/scss/app.scss */
+.teal-bg {
+  background-color: #5A9AA8;
+}
+
+/* line 55, ../../../../site_components/sosh/scss/app.scss */
+.teal-dark-bg {
+  background-color: #487B86;
+}
+
+/* line 60, ../../../../site_components/sosh/scss/app.scss */
 h1, h2, h3, h4, h5, h6, p, div, li {
   font-family: BentonSans, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 8, ../../../../site_components/sosh/scss/app.scss */
+/* line 65, ../../../../site_components/sosh/scss/app.scss */
 section section {
   padding: 1em 0;
 }
 
-/* line 12, ../../../../site_components/sosh/scss/app.scss */
+/* line 69, ../../../../site_components/sosh/scss/app.scss */
 .shim {
   margin: 2em 0;
 }
 
-/* line 16, ../../../../site_components/sosh/scss/app.scss */
-.markup {
+/* line 75, ../../../../site_components/sosh/scss/app.scss */
+.b-swatch {
+  height: 5em;
+  width: 5em;
+}
+
+/* line 80, ../../../../site_components/sosh/scss/app.scss */
+.b-markup {
   margin-top: 2.6em;
 }
 
-/* line 20, ../../../../site_components/sosh/scss/app.scss */
-.markup:before {
+/* line 84, ../../../../site_components/sosh/scss/app.scss */
+.b-markup:before {
   position: relative;
   padding: 0px 4px;
   background: #e8e6e3;
@@ -35,62 +111,51 @@ section section {
   border-left: none;
 }
 
-/* line 35, ../../../../site_components/sosh/scss/app.scss */
-.primary-bg {
-  background-color: #ffffff;
-}
-
-/* line 39, ../../../../site_components/sosh/scss/app.scss */
-.alt-bg {
-  background-color: #eeeeee;
-}
-
-/* line 46, ../../../../site_components/sosh/scss/app.scss */
+/* line 99, ../../../../site_components/sosh/scss/app.scss */
 .b-snippet {
   overflow: scroll;
   border: 1px solid #ccc;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
-/* line 53, ../../../../site_components/sosh/scss/app.scss */
+/* line 106, ../../../../site_components/sosh/scss/app.scss */
 .b-card-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-/* line 59, ../../../../site_components/sosh/scss/app.scss */
+/* line 112, ../../../../site_components/sosh/scss/app.scss */
 .b-card-list a {
   cursor: pointer;
 }
 
-/* line 63, ../../../../site_components/sosh/scss/app.scss */
-.b-card-list li {
-  background-color: #ccc;
+/* line 116, ../../../../site_components/sosh/scss/app.scss */
+.b-card {
+  background-color: #CCCCCC;
   margin: 5px;
   padding: 1px;
   display: inline-block;
 }
 
-/* line 70, ../../../../site_components/sosh/scss/app.scss */
-.b-card {
+/* line 123, ../../../../site_components/sosh/scss/app.scss */
+.e-card-content {
   padding: 10px;
-  background-color: #fff;
 }
 
-/* line 75, ../../../../site_components/sosh/scss/app.scss */
+/* line 127, ../../../../site_components/sosh/scss/app.scss */
 .e-event-image {
   width: 330px;
   height: 220px;
 }
 
-/* line 80, ../../../../site_components/sosh/scss/app.scss */
+/* line 132, ../../../../site_components/sosh/scss/app.scss */
 .e-stub-strip {
   display: inline-flex;
   width: 100%;
 }
 
-/* line 85, ../../../../site_components/sosh/scss/app.scss */
+/* line 137, ../../../../site_components/sosh/scss/app.scss */
 .e-stub {
   display: inline-block;
   width: 32%;
@@ -99,65 +164,62 @@ section section {
   padding: 8px 4px;
 }
 
-/* line 93, ../../../../site_components/sosh/scss/app.scss */
+/* line 145, ../../../../site_components/sosh/scss/app.scss */
 .e-stub:hover {
-  background-color: #eee;
   border-radius: 5px;
 }
 
-/* line 98, ../../../../site_components/sosh/scss/app.scss */
+/* line 149, ../../../../site_components/sosh/scss/app.scss */
 .e-description {
   margin: 5px;
   height: 3em;
   font-size: 18px;
-  font-family: "BentonSans Medium",Arial,sans-serif;
   font-weight: 500;
   width: 320px;
   overflow: hidden;
 }
 
-/* line 108, ../../../../site_components/sosh/scss/app.scss */
+/* line 158, ../../../../site_components/sosh/scss/app.scss */
 .e-paging-button {
   display: inline-flex;
   border: 0;
-  background-color: #fff;
   height: 2em;
   margin: 0;
   padding: 8px 4px;
   align-items: center;
 }
 
-/* line 118, ../../../../site_components/sosh/scss/app.scss */
+/* line 167, ../../../../site_components/sosh/scss/app.scss */
 .e-paging-button:hover {
-  background-color: #eee;
+  background-color: #EEEEEE;
 }
 
-/* line 122, ../../../../site_components/sosh/scss/app.scss */
+/* line 171, ../../../../site_components/sosh/scss/app.scss */
 .e-paging-button.disabled {
   opacity: .30;
 }
 
-/* line 126, ../../../../site_components/sosh/scss/app.scss */
+/* line 175, ../../../../site_components/sosh/scss/app.scss */
 .e-paging-button.disabled:hover {
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 
-/* line 131, ../../../../site_components/sosh/scss/app.scss */
+/* line 180, ../../../../site_components/sosh/scss/app.scss */
 .e-date {
   font-size: 13px;
 }
 
-/* line 135, ../../../../site_components/sosh/scss/app.scss */
+/* line 184, ../../../../site_components/sosh/scss/app.scss */
 .e-stub:hover .e-date {
   font-weight: bold;
 }
 
-/* line 139, ../../../../site_components/sosh/scss/app.scss */
+/* line 188, ../../../../site_components/sosh/scss/app.scss */
 .e-quantity {
   font-size: 12px;
 }
 
-/* line 143, ../../../../site_components/sosh/scss/app.scss */
+/* line 192, ../../../../site_components/sosh/scss/app.scss */
 .e-quantity.sold-out {
   color: #E56C69;
 }
