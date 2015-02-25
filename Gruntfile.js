@@ -147,8 +147,13 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    // flattens results to a single level
-                    {expand: true, flatten: true, src: ['pipeline/src/images/**'], dest: 'pipeline/public/dst/images/', filter: 'isFile'},
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['pipeline/src/images/**'],
+                        dest: 'pipeline/public/dst/images/',
+                        filter: 'isFile'
+                    }
                 ]
             }
         }
@@ -171,6 +176,6 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['karma:development','protractor:singlerun']);
     grunt.registerTask('lint', ['jshint:myFiles']);
 
-    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy', 'browserSync', 'watch']);
 
 };

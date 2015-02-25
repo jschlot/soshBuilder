@@ -1,99 +1,50 @@
 @import "settings";
+@import "colors";
+@import "typography";
+@import "depth";
 
-.primary-bg {
-  background-color: $neutral-color;
+.valign {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-
-.dark-bg {
-  background-color: $dark-color;
-  color: $neutral-color;
-}
-
-.alt-bg {
-  background-color: $alt-color;
-}
-
-.border-bg {
-  background-color: $border-color;
-  color: $neutral-color;
-}
-
-.blue-bg {
-  background-color: $background-blue-color;
-}
-
-.blue-dark-bg {
-  background-color: $background-blue-dark-color;
-  color: $neutral-color;
-}
-
-.gold-bg {
-  background-color: $background-gold-color;
-}
-
-.gold-dark-bg {
-  background-color: $background-gold-dark-color;
-  color: $neutral-color;
-}
-
-.purple-bg {
-  background-color: $background-purple-color;
-}
-
-.purple-dark-bg {
-  background-color: $background-purple-dark-color;
-  color: $neutral-color;
-}
-
-.red-bg {
-  background-color: $background-red-color;
-}
-
-.red-dark-bg {
-  background-color: $background-red-dark-color;
-  color: $neutral-color;
-}
-
-.teal-bg {
-  background-color: $background-teal-color;
-}
-
-.teal-dark-bg {
-  background-color: $background-teal-dark-color;
-  color: $neutral-color;
-}
-
-
-h1,h2,h3,h4,h5,h6,p,div, li {
-  font-family:$default-font;
-  -webkit-font-smoothing: antialiased;
-}
-
 
 .shim {
-	padding: 3em 0;
+	padding: 2em 0 0 0;
+}
+
+.alt-bg.shim {
+  padding: 2em 0;
 }
 
 //// BEM Here down
 .b-swatch {
-  height: 5em;
-  width: 5em;
+  height: 7em;
+  width: 7em;
   display: inline-flex;
   align-content: center;
 }
 
-.b-markup {
-  margin-top: 2.6em;
+.markup {
+  margin-top: 4.6em;
 }
 
-.b-markup:before {
+.markup:before {
   position: relative;
   padding: 0px 4px;
-  background: #e8e6e3;
-  top: 1.3em;
+  background-color: $border-color;
+  top: 1.4em;
   left: .1em;
   -webkit-font-smoothing: antialiased;
-  color: #555;
+  color: $alt-color;
   content: attr(class);
   font-size: 0.9rem;
   border: solid 1px rgba(51, 51, 51, 0.12);
@@ -103,8 +54,10 @@ h1,h2,h3,h4,h5,h6,p,div, li {
 
 .b-snippet {
   overflow: scroll;
-  border: 1px solid #ccc;
-  background-color: $neutral-color
+  border: 1px solid $border-color;
+  color: $neutral-color;
+  background-color: $dark-color;
+  font-size: 70%;
 
 }
 
@@ -179,7 +132,7 @@ h1,h2,h3,h4,h5,h6,p,div, li {
 }
 
 .e-paging-button.disabled:hover {
-  background-color: $neutral-color;
+  color: $neutral-color;
 }
 
 .e-date {
@@ -195,5 +148,5 @@ h1,h2,h3,h4,h5,h6,p,div, li {
 }
 
 .e-quantity.sold-out {
-  color: #E56C69;
+  color: $red-dark-color;
 }

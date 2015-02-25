@@ -39,6 +39,14 @@ angular
                 templateUrl : '/dst/javascripts/templates/pages/cards.html',
                 controller: 'dummyController'
             })
+            .when('/depth', {
+                templateUrl : '/dst/javascripts/templates/pages/depth.html',
+                controller: 'dummyController'
+            })
+            .when('/helpers', {
+                templateUrl : '/dst/javascripts/templates/pages/helpers.html',
+                controller: 'dummyController'
+            })
             .when('/typography', {
                 templateUrl : '/dst/javascripts/templates/pages/typography.html',
                 controller: 'dummyController'
