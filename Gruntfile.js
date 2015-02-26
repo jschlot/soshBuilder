@@ -106,11 +106,6 @@ module.exports = function (grunt) {
                         'pipeline/src/bower_components/angular-route/angular-route.min.js',
                         'pipeline/src/bower_components/angular-sanitize/angular-sanitize.min.js'
                     ],
-                    'pipeline/public/dst/javascripts/foundation.min.js': [
-                        'pipeline/src/bower_components/jquery/dist/jquery.min.js',
-                        'pipeline/src/bower_components/foundation/js/foundation.min.js',
-                        'pipeline/src/bower_components/foundation/js/foundation.topbar.min.js'
-                    ],
                     'pipeline/public/dst/javascripts/navigation.min.js': [
                         'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js'
                     ]
