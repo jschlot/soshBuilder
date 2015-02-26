@@ -4,6 +4,15 @@ module.exports = function (grunt) {
 
         'pkg': grunt.file.readJSON('package.json'),
 
+        'asciify': {
+            'myBanner': {
+                'text': 'soshBuilder'
+            },
+            'options': {
+                'font': 'graffiti',
+                'log': true
+            }
+        },
         'meta': {
             'jsFilesForTesting': [
                 'test/**/*Spec.js'
@@ -16,7 +25,7 @@ module.exports = function (grunt) {
     	    },
     	    'dev': {
     	      'options': {
-    	        'script': 'pipeline/app.js'
+    	        'script': 'pipeline/bin/www'
     	      }
     	    }
     	},
@@ -58,7 +67,7 @@ module.exports = function (grunt) {
                         'pipeline/public/dst/stylesheets/*.css',
                         'pipeline/public/dst/javascripts/*.js',
                         'pipeline/public/dst/javascripts/templates/*/*.html',
-                        'pipeline/public/*.html',
+                        'pipeline/public/*.html'
                    ]
                 },
                 'options': {
@@ -159,6 +168,7 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-asciify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-protractor-runner');
@@ -171,11 +181,25 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
+
+
     grunt.registerTask('unit', ['karma:development']);
     grunt.registerTask('e2e', ['protractor:singlerun']);
-    grunt.registerTask('test', ['karma:development','protractor:singlerun']);
     grunt.registerTask('lint', ['jshint:myFiles']);
+    grunt.registerTask('serve', ['express:dev']);
 
-    grunt.registerTask('default', ['compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy', 'browserSync', 'watch']);
+    grunt.registerTask('boilerplate', 'outputs help info', function(){
+        console.log('\nWelcome to the soshBuilder\n'['yellow'].bold);
+        console.log('NOTE: You must have the express server running on a different tab\n'['red'].bold);
+        console.log('* To run the express server, use `nodemon pipeline/bin/www`'['yellow']);
+        console.log('* To run the test workflow, open a new tab, and use `grunt test`'['yellow']);
+        console.log('* To run the developer workflow, open a new tab, and use `grunt develop`'['yellow']);
+        console.log('* To run the deployment workflow, open a new tab, and use `grunt`'['yellow']);
+    });
+    grunt.registerTask('help', ['asciify', 'boilerplate']);
+
+    grunt.registerTask('test', ['asciify', 'karma:development','protractor:singlerun']);
+    grunt.registerTask('develop', ['asciify', 'compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['asciify', 'compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy']);
 
 };
