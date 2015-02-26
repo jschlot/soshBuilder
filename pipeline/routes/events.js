@@ -4,7 +4,7 @@ var express = require('express'),
 
 events.totals = {
     merchant: {
-        name: 'Stones Throw',
+        name: "Stones Throw",
         logourl: "stonesthrowlogo.png",
         location: {
             city: "San Francisco",
