@@ -1,14 +1,15 @@
 angular
 	.module('feddevtools', ['ngRoute'])
 	.directive('topNavBar',
-        [ 	// insertion here
+        [
             function(){
                 function linkingFunction(scope, element, attrs){
-                    
                 }
                     
                 function controller($scope){
         
+                    $scope.menu = ['styles','components','modules','services','examples'];
+
                     // destroy ////////////////////////////////
                     $scope.$on("$destroy", function(){
                     });
@@ -35,23 +36,13 @@ angular
     )
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
-            .when('/cards', {
-                templateUrl : '/dst/javascripts/templates/pages/cards.html',
+            .when('/:section/', {
+                templateUrl : function (params) { 
+                    return '/dst/javascripts/templates/pages/' + params.section + '.html'; 
+                },
                 controller: 'dummyController'
             })
-            .when('/depth', {
-                templateUrl : '/dst/javascripts/templates/pages/depth.html',
-                controller: 'dummyController'
-            })
-            .when('/helpers', {
-                templateUrl : '/dst/javascripts/templates/pages/helpers.html',
-                controller: 'dummyController'
-            })
-            .when('/typography', {
-                templateUrl : '/dst/javascripts/templates/pages/typography.html',
-                controller: 'dummyController'
-            })
-            .when('/colors', {
+            .otherwise({
                 templateUrl : '/dst/javascripts/templates/pages/colors.html',
                 controller: 'dummyController'
             });

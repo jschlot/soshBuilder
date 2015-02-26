@@ -16,8 +16,12 @@
 
 </head>
 <body ng-app="feddevtools" class="alt-bg">
-    <top-nav-bar></top-nav-bar>
-    <section class="shim primary-bg" ng-view></section>
+
+    <section style="position: fixed; width: 15%; overflow: hidden;">
+        <top-nav-bar></top-nav-bar>
+    </section>
+    <section  style="display: inline-block; width:80%; margin-left: 18%;" ng-view></section>
+
     <script src="/dst/javascripts/angular.min.js"></script>
 
     <!--// START BLOCK: Declare any Javascript files to be included here //-->

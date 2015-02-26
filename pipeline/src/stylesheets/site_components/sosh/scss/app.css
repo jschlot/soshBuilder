@@ -118,44 +118,44 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* line 41, ../../../../site_components/sosh/scss/_typography.scss */
 h1 {
-  font-size: 4.2rem;
-  line-height: 4.62rem;
-  margin: 2.1rem 0 1.68rem 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 1.6rem 0;
 }
 
 /* line 47, ../../../../site_components/sosh/scss/_typography.scss */
 h2 {
-  font-size: 3.56rem;
-  line-height: 3.916rem;
-  margin: 1.78rem 0 1.424rem 0;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin: 1.2rem 0;
 }
 
 /* line 53, ../../../../site_components/sosh/scss/_typography.scss */
 h3 {
-  font-size: 2.92rem;
-  line-height: 3.212rem;
-  margin: 1.46rem 0 1.168rem 0;
+  font-size: 1.067rem;
+  line-height: 1.067rem;
+  margin: 1.067rem 0;
 }
 
 /* line 59, ../../../../site_components/sosh/scss/_typography.scss */
 h4 {
-  font-size: 2.28rem;
-  line-height: 2.508rem;
-  margin: 1.14rem 0 0.912rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 1rem 0;
 }
 
 /* line 65, ../../../../site_components/sosh/scss/_typography.scss */
 h5 {
-  font-size: 1.64rem;
-  line-height: 1.804rem;
-  margin: 0.82rem 0 0.656rem 0;
+  font-size: 0.9333rem;
+  line-height: 0.9333rem;
+  margin: 0.9333rem 0;
 }
 
 /* line 71, ../../../../site_components/sosh/scss/_typography.scss */
 h6 {
-  font-size: 1rem;
-  line-height: 1.1rem;
-  margin: 0.5rem 0 0.4rem 0;
+  font-size: 0.8667rem;
+  line-height: 0.8667rem;
+  margin: 0.8667rem 0;
 }
 
 /* line 77, ../../../../site_components/sosh/scss/_typography.scss */

@@ -3,7 +3,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         'pkg': grunt.file.readJSON('package.json'),
-
         'asciify': {
             'myBanner': {
                 'text': 'soshBuilder'
@@ -18,7 +17,6 @@ module.exports = function (grunt) {
                 'test/**/*Spec.js'
             ]
         },
-
         'karma': {
             'development': {
                 'configFile': 'karma.conf.js',
@@ -30,7 +28,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         'protractor': {
             'options': {
                 'keepAlive': true,
@@ -77,6 +74,10 @@ module.exports = function (grunt) {
             'html': {
                 'files': ['pipeline/src/**/*.html'],
                 'tasks': ['htmlmin:dist']
+            },
+            'webroot': {
+                'files': ['pipeline/src/webroot/*.*'],
+                'tasks': ['copy']
             }
     	},
     	'compass': {
