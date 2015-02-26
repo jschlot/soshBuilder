@@ -115,9 +115,6 @@ module.exports = function (grunt) {
         'cssmin': {
             'target': {
                 'files': {
-                    'pipeline/public/dst/stylesheets/foundation.min.css': [
-                        'pipeline/src/stylesheets/bower_components/foundation/scss/foundation.css'
-                    ],
                     'pipeline/public/dst/stylesheets/app.min.css': [
                         'pipeline/src/stylesheets/site_components/sosh/scss/app.css',                        
                         'pipeline/src/stylesheets/web_fonts/fonts.css'
@@ -131,30 +128,41 @@ module.exports = function (grunt) {
                 'removeComments': true,
                 'collapseWhitespace': true
               },
-              expand: true,
-              cwd: 'pipeline/src/site_components/sosh/scripts/',
-              src: ['**/**/*.html'],
-              dest: 'pipeline/public/dst/javascripts/templates/'
+              'expand': true,
+              'cwd': 'pipeline/src/site_components/sosh/scripts/',
+              'src': ['**/**/*.html'],
+              'dest': 'pipeline/public/dst/javascripts/templates/'
             }
         },
-        copy: {
-            main: {
-                files: [
+        'copy': {
+            'images': {
+                'files': [
                     {
-                        expand: true,
-                        flatten: true,
-                        src: ['pipeline/src/images/**'],
-                        dest: 'pipeline/public/dst/images/',
-                        filter: 'isFile'
+                        'expand': true,
+                        'flatten': true,
+                        'src': ['pipeline/src/images/**'],
+                        'dest': 'pipeline/public/dst/images/',
+                        'filter': 'isFile'
+                    }
+                ]
+            },
+            'webroot': {
+                'files': [
+                    {
+                        'expand': true,
+                        'flatten': true,
+                        'src': ['pipeline/src/webroot/**'],
+                        'dest': 'pipeline/public/',
+                        'filter': 'isFile'
                     }
                 ]
             }
         },
-        concurrent: {
-            options: {
-                logConcurrentOutput: true
+        'concurrent': {
+            'options': {
+                'logConcurrentOutput': true
             },
-            target1: ['deploy','serve']
+            'target1': ['deploy','serve']
         },
         'nodemon': {
             'dev': {
