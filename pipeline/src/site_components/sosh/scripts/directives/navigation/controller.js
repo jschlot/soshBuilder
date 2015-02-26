@@ -43,7 +43,7 @@ angular
                 controller: 'dummyController'
             })
             .otherwise({
-                templateUrl : '/dst/javascripts/templates/pages/colors.html',
+                templateUrl : '/dst/javascripts/templates/pages/styles.html',
                 controller: 'dummyController'
             });
     }]);
