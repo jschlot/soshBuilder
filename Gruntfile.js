@@ -19,17 +19,6 @@ module.exports = function (grunt) {
             ]
         },
 
-    	'express': {
-    	    'options': {
-    	      // Override defaults here
-    	    },
-    	    'dev': {
-    	      'options': {
-    	        'script': 'pipeline/bin/www'
-    	      }
-    	    }
-    	},
-
         'karma': {
             'development': {
                 'configFile': 'karma.conf.js',
@@ -165,6 +154,18 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        concurrent: {
+            options: {
+                logConcurrentOutput: true
+            },
+            target1: ['deploy','serve']
+        },
+        'nodemon': {
+            'dev': {
+                'script': 'pipeline/bin/www'
+            }
+
         }
     });
 
@@ -177,29 +178,31 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
-
+    grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-nodemon');
 
 
     grunt.registerTask('unit', ['karma:development']);
     grunt.registerTask('e2e', ['protractor:singlerun']);
     grunt.registerTask('lint', ['jshint:myFiles']);
-    grunt.registerTask('serve', ['express:dev']);
 
     grunt.registerTask('boilerplate', 'outputs help info', function(){
         console.log('\nWelcome to the soshBuilder\n'['yellow'].bold);
-        console.log('NOTE: You must have the express server running on a different tab\n'['red'].bold);
-        console.log('* To run the express server, use `nodemon pipeline/bin/www`'['yellow']);
+        console.log('* To run the localhost server, open a new tab, and use `grunt serve`'['yellow']);
         console.log('* To run the test workflow, open a new tab, and use `grunt test`'['yellow']);
         console.log('* To run the developer workflow, open a new tab, and use `grunt develop`'['yellow']);
-        console.log('* To run the deployment workflow, open a new tab, and use `grunt`'['yellow']);
+        console.log('* To run the deploy workflow, open a new tab, and use `grunt`'['yellow']);
     });
     grunt.registerTask('help', ['asciify', 'boilerplate']);
 
+
+    // hybrid tasks
     grunt.registerTask('test', ['asciify', 'karma:development','protractor:singlerun']);
-    grunt.registerTask('develop', ['asciify', 'compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy', 'browserSync', 'watch']);
-    grunt.registerTask('default', ['asciify', 'compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy']);
+    grunt.registerTask('deploy', ['asciify', 'compass:prod','uglify:all','cssmin', 'htmlmin:dist', 'copy']);
+    grunt.registerTask('serve', ['nodemon']);
+    grunt.registerTask('develop', ['deploy','browserSync','watch']);
+    grunt.registerTask('default', ['deploy']);
 
 };
