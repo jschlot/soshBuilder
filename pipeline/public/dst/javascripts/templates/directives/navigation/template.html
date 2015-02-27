@@ -1,1 +1,1 @@
-<nav><ul><li><h1>soshBuilder UI</h1></li><li ng-repeat="heading in menu"><a ng-href="#{{heading}}" ng-bind="heading"></a></li></ul></nav>
+<nav class="b-navigation-header"><ul><li><h1>soshBuilder UI</h1></li><li ng-repeat="heading in menu" ng-class="isActive(heading)"><a ng-href="#{{heading}}" ng-bind="heading"></a></li></ul><div class="clearfix"></div></nav>

@@ -1,14 +1,18 @@
 angular
-	.module('feddevtools', ['ngRoute'])
+	.module('feddevtools', ['ngRoute','cardsModule'])
 	.directive('topNavBar',
-        [
-            function(){
+        [ '$routeParams',
+            function($routeParams){
                 function linkingFunction(scope, element, attrs){
                 }
                     
                 function controller($scope){
         
-                    $scope.menu = ['styles','components','modules','services','examples'];
+                    $scope.menu = ['styles', 'iconography', 'components', 'modules', 'services', 'examples'];
+
+                    $scope.isActive = function(section) {
+                        return $routeParams.section === section ? "active" : '';
+                    };
 
                     // destroy ////////////////////////////////
                     $scope.$on("$destroy", function(){

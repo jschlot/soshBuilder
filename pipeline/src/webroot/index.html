@@ -15,17 +15,21 @@
     <!--// END BLOCK //-->
 
 </head>
-<body ng-app="feddevtools" class="alt-bg">
+<body ng-app="feddevtools">
 
-    <section class="nav-left">
+    <header>
         <top-nav-bar></top-nav-bar>
-    </section>
-    <section class="nav-main" ng-view></section>
+    </header>
+
+    <main ng-view></main>
+
+    <footer>@copy; 2015, offlinelabs</footer>
 
     <script src="/dst/javascripts/angular.min.js"></script>
 
     <!--// START BLOCK: Declare any Javascript files to be included here //-->
     <script src="/dst/javascripts/navigation.min.js"></script>
+    <script src="/dst/javascripts/cards.min.js"></script>
     <!--// END BLOCK //-->
 
 </body>

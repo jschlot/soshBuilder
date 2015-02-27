@@ -1,5 +1,6 @@
 $neutral-color: #FFFFFF;
 $dark-color: #333333;
+$charcoal-color: #666666;
 $alt-color: #EEEEEE;
 $border-color: #CCCCCC;
 
@@ -15,9 +16,3 @@ $teal-color: #5A9AA8;
 $teal-dark-color: #487B86;
 
 $default-font: BentonSans,Arial,sans-serif;
-
-$standard-padding: 1.3em;
-
-@mixin shim-padding() {
-  padding: 1em 0;
-}

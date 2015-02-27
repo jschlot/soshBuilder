@@ -109,6 +109,9 @@ module.exports = function (grunt) {
                     ],
                     'pipeline/public/dst/javascripts/navigation.min.js': [
                         'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js'
+                    ],
+                    'pipeline/public/dst/javascripts/cards.min.js': [
+                        'pipeline/src/site_components/sosh/scripts/directives/cards/controller.js'
                     ]
     	    	}
     	    }

@@ -1,64 +1,127 @@
-@import "settings";
-
-.primary-bg {
+.neutral {
   background-color: $neutral-color;
 }
 
-.dark-bg {
+.dark {
   background-color: $dark-color;
   color: $neutral-color;
 }
 
-.alt-bg {
+.charcoal {
+  background-color: $charcoal-color;
+  color: $neutral-color;
+}
+
+.alt {
   background-color: $alt-color;
 }
 
-.border-bg {
+.border {
   background-color: $border-color;
   color: $neutral-color;
 }
 
-.blue-bg {
+.blue {
   background-color: $blue-color;
 }
 
-.blue-dark-bg {
+.blue-dark {
   background-color: $blue-dark-color;
   color: $neutral-color;
 }
 
-.gold-bg {
+.gold {
   background-color: $gold-color;
 }
 
-.gold-dark-bg {
+.gold-dark {
   background-color: $gold-dark-color;
   color: $neutral-color;
 }
 
-.purple-bg {
+.purple {
   background-color: $purple-color;
 }
 
-.purple-dark-bg {
+.purple-dark {
   background-color: $purple-dark-color;
   color: $neutral-color;
 }
 
-.red-bg {
+.red {
   background-color: $red-color;
 }
 
-.red-dark-bg {
+.red-dark {
   background-color: $red-dark-color;
   color: $neutral-color;
 }
 
-.teal-bg {
+.teal {
   background-color: $teal-color;
 }
 
-.teal-dark-bg {
+.teal-dark {
   background-color: $teal-dark-color;
   color: $neutral-color;
+}
+
+.neutral-text {
+  color: $neutral-color;
+}
+
+.dark-text {
+  color: $dark-color;
+}
+
+.charcoal-text {
+  color: $charcoal-color;
+}
+
+.alt-text {
+  color: $alt-color;
+}
+
+.border-text {
+  color: $border-color;
+}
+
+.blue-text {
+  color: $blue-color;
+}
+
+.blue-dark-text {
+  color: $blue-dark-color;
+}
+
+.gold-text {
+  color: $gold-color;
+}
+
+.gold-dark-text {
+  color: $gold-dark-color;
+}
+
+.purple-text {
+  color: $purple-color;
+}
+
+.purple-dark-text {
+  color: $purple-dark-color;
+}
+
+.red-text {
+  color: $red-color;
+}
+
+.red-dark-text {
+  color: $red-dark-color;
+}
+
+.teal-text {
+  color: $teal-color;
+}
+
+.teal-dark-text {
+  color: $teal-dark-color;
 }

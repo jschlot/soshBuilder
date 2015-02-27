@@ -1,0 +1,111 @@
+.b-swatch {
+  height: 7em;
+  width: 7em;
+  display: inline-flex;
+  align-content: center;
+}
+
+.b-card-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.b-card-list a {
+  cursor: pointer;
+}
+
+.b-card {
+  background-color: $border-color;
+  margin: 5px;
+  padding: 1px;
+  display: inline-block;
+}
+
+.e-card-content {
+  padding: 10px;
+}
+
+.e-card-label {
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid $border-color;
+}
+
+.e-event-image {
+  width: 330px;
+  height: 220px;
+}
+
+.e-stub-strip {
+  margin: 5px;
+  display: inline-flex;
+  width: 100%;
+}
+
+.e-stub {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 0;
+  padding: 8px 4px;
+}
+
+.e-stub:hover {
+  border-radius: 5px;
+}
+
+.e-description {
+  margin: 5px;
+  height: 3em;
+  font-size: 18px;
+  font-weight: 500;
+  width: 320px;
+  overflow: hidden;
+}
+
+.e-paging-button {
+  display: inline-flex;
+  border: 0;
+  height: 2em;
+  margin: 0;
+  padding: 8px 4px;
+  align-items: center;
+}
+
+.e-paging-button:hover {
+  background-color: $alt-color;
+}
+
+.e-paging-button.disabled {
+  opacity: .30;
+}
+
+.e-paging-button.disabled:hover {
+  color: $neutral-color;
+}
+
+.e-date {
+  font-size: 13px;
+}
+
+.e-stub:hover .e-date {
+  font-weight: bold
+}
+
+.e-quantity {
+  font-size: 12px;
+}
+
+.e-quantity.sold-out {
+  color: $red-dark-color;
+}
+
+.b-card-panel {
+  padding: 20px;
+  margin: 0.5rem 0 1rem 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
