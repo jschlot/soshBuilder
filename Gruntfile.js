@@ -101,6 +101,9 @@ module.exports = function (grunt) {
     	'uglify': {
     	    'all': {
             	'files': {
+                    'pipeline/public/dst/javascripts/prism.min.js': [
+                        'pipeline/src/bower_components/prism/prism.js'
+                    ],
                     'pipeline/public/dst/javascripts/angular.min.js': [
                         'pipeline/src/bower_components/angular/angular.min.js',
                         'pipeline/src/bower_components/angular-loader/angular-loader.min.js',
@@ -119,6 +122,9 @@ module.exports = function (grunt) {
         'cssmin': {
             'target': {
                 'files': {
+                    'pipeline/public/dst/stylesheets/prism.min.css': [
+                        'pipeline/src/bower_components/prism/prism.css'
+                    ],
                     'pipeline/public/dst/stylesheets/app.min.css': [
                         'pipeline/src/stylesheets/site_components/sosh/scss/app.css',                        
                         'pipeline/src/stylesheets/web_fonts/fonts.css'
