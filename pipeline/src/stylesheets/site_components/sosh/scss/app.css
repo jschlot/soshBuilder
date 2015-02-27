@@ -985,33 +985,22 @@ blockquote {
   justify-content: center;
 }
 
-/* line 15, ../../../../site_components/sosh/scss/_helpers.scss */
-.markup:before {
-  position: relative;
-  z-index: 100;
-  padding: 0px 4px;
-  background-color: #CCCCCC;
-  top: 1.4em;
-  left: .1em;
-  -webkit-font-smoothing: antialiased;
-  color: #333333;
-  content: attr(class);
-  font-size: 0.9rem;
-  border: solid 1px rgba(51, 51, 51, 0.12);
-  border-top: none;
-  border-left: none;
+/* line 16, ../../../../site_components/sosh/scss/_helpers.scss */
+.text-left {
+  text-align: left !important;
 }
 
-/* line 32, ../../../../site_components/sosh/scss/_helpers.scss */
-.b-snippet {
-  overflow: scroll;
-  border: 1px solid #CCCCCC;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: .5em;
+/* line 20, ../../../../site_components/sosh/scss/_helpers.scss */
+.text-right {
+  text-align: right !important;
 }
 
-/* line 40, ../../../../site_components/sosh/scss/_helpers.scss */
+/* line 25, ../../../../site_components/sosh/scss/_helpers.scss */
+.text-center {
+  text-align: center !important;
+}
+
+/* line 29, ../../../../site_components/sosh/scss/_helpers.scss */
 .clearfix {
   clear: both;
 }

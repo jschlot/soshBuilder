@@ -1,10 +1,6 @@
 <section class="container">
     <h1>Styles</h1>
 
-<pre><code class="language-markup" prism><script type="prism-html-markup">
-<div>foo</div>
-<div>foo</div></script></code></pre>
-
     <section id="colors">
         <div class="row">
             <div class="col s12">
@@ -27,11 +23,12 @@
                     This is a card-panel with a teal class.
                 </div>
 
-                <pre class="markup">
-                    <div class="b-snippet">
-&lt;div class="b-card-panel teal z-depth-1"&gt;
-    This is a card-panel with a teal class
-&lt;/div&gt;
+<pre><code class="language-markup" prism><script type="prism-html-markup">
+<div class="b-card-panel teal z-depth-1">
+    This is a card-panel with a teal class.
+</div>
+</script></code></pre>
+
                     </div>
                 </pre>
             </div>
@@ -47,13 +44,12 @@
                     This is a card-panel with a teal-text class.
                 </div>
 
-                <pre class="markup">
-                    <div class="b-snippet">
-&lt;div class="b-card-panel teal-text z-depth-1"&gt;
-        This is a card-panel with a teal class.
-&lt;/div&gt;
-                    </div>
-                </pre>
+<pre><code class="language-markup" prism><script type="prism-html-markup">
+<div class="b-card-panel teal-text z-depth-1">
+    This is a card-panel with a teal-text class.
+</div>
+</script></code></pre>
+
             </div>
         </div>
 
@@ -185,7 +181,7 @@
                 </p>
             </div>
             <div class="col s6">
-                <div class="b-card-panel z-depth-2">
+                <div class="b-card-panel z-depth-1">
                     <img src="/dst/images/Benton-Sans.gif">
                 </div>
             </div>
@@ -197,7 +193,7 @@
                     Provided are some basic styling on header tags.
                     In the example, you can see the the 6 header tags' different sizes.
                 </p>
-                <div class="b-card-panel z-depth-2">
+                <div class="b-card-panel z-depth-1">
                     <h1>h1. This is a very large header.</h1>
                     <h2>h2. This is a large header.</h2>
                     <h3>h3. This is a medium header.</h3>
@@ -214,20 +210,19 @@
                     This is an example quotation that uses the blockquote tag.
                 </blockquote>
 
-                <pre class="markup">
-                    <div class="b-snippet">
-&lt;blockquote&gt;
+<pre><code class="language-markup" prism><script type="prism-html-markup">
+<blockquote>
     This is an example quotation that uses the blockquote tag.
-&lt;/blockquote&gt;
-                    </div>
-                </pre>
+</blockquote>
+</script></code></pre>
+
             </div>
         </div>
         <div class="row">
             <div class="col s12">
                 <h3>Flow Text</h3>
 
-                <div class="flow-text b-card-panel z-depth-2">
+                <div class="flow-text b-card-panel z-depth-1">
                     One common flaw seen in many frameworks is a lack of support for truly responsive text.
                     While elements on the page resize fluidly, text still resizes on a fixed basis.
                     To ameliorate this problem, for text heavy pages, supplied is a class that fluidly scales text
@@ -235,13 +230,11 @@
                     Line length stays between 45-80 characters and line height scales to be larger on smaller screens.
                 </div>
 
-                <pre class="markup">
-                    <div class="b-snippet">
-&lt;div class="flow-text b-card-panel z-depth-2"&gt;
-    ... your flowing text would go here ...
-&lt;/div&gt;
-                    </div>
-                </pre>
+<pre><code class="language-markup" prism><script type="prism-html-markup">
+<div class="flow-text b-card-panel z-depth-1">
+    ... flowing text goes here ...
+</div>
+</script></code></pre>
 
             </div>
         </div>
@@ -302,17 +295,16 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <div class="b-card-panel z-depth-2 valign" style="height: 12em;">
+                <div class="b-card-panel z-depth-1 valign" style="height: 12em;">
                     <h5>just add the "valign" class to any element</h5>
                 </div>
 
-                <pre class="markup">
-                    <div class="b-snippet">
-&lt;div class="b-card-panel z-depth-2 valign"&gt;
-    &lt;h5&gt;just add the "valign" class to any element&lt;/h5&gt;
-&lt;/div&gt;
-                    </div>
-                </pre>
+<pre><code class="language-markup" prism><script type="prism-html-markup">
+<div class="b-card-panel z-depth-1 valign" style="height: 12em;">
+    <h5>just add the "valign" class to any element</h5>
+</div>
+</script></code></pre>
+
 
             </div>
         </div>
@@ -320,44 +312,24 @@
         <div class="row">
             <div class="col s12">
                 <h3>Horizontal alignment</h3>
+
+                <h5 class="text-left">.text-left</h5>
+                <div class="b-card-panel z-depth-1">
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis.</p>
+                </div>
+
+                <h5 class="text-right">.text-right</h5>
+                <div class="b-card-panel z-depth-1">
+                    <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis.</p>
+                </div>
+
+                <h5 class="text-center">.text-center</h5>
+                <div class="b-card-panel z-depth-1 text-center">
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis.</p>
+                </div>
+
             </div>
         </div>
 
-        <div>
-            <h5 class="text-left">.text-left</h5>
-            <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis, finibus nisi quis, hendrerit mauris. Vivamus venenatis at mi efficitur ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas dictum neque lobortis elit lacinia malesuada. Integer eget sem eu ex ornare aliquet in in mauris. Nulla facilisi. Proin odio urna, semper a lacinia eu, tristique ut ligula.</p>
-            <hr>
-
-            <h5 class="text-right">.text-right</h5>
-            <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis, finibus nisi quis, hendrerit mauris. Vivamus venenatis at mi efficitur ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas dictum neque lobortis elit lacinia malesuada. Integer eget sem eu ex ornare aliquet in in mauris. Nulla facilisi. Proin odio urna, semper a lacinia eu, tristique ut ligula.</p>
-            <hr>
-
-            <h5 class="text-center">.text-center</h5>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis, finibus nisi quis, hendrerit mauris. Vivamus venenatis at mi efficitur ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas dictum neque lobortis elit lacinia malesuada. Integer eget sem eu ex ornare aliquet in in mauris. Nulla facilisi. Proin odio urna, semper a lacinia eu, tristique ut ligula.</p>
-            <hr>
-
-            <h5 class="text-justify">.text-justify</h5>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec lectus lobortis, finibus nisi quis, hendrerit mauris. Vivamus venenatis at mi efficitur ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas dictum neque lobortis elit lacinia malesuada. Integer eget sem eu ex ornare aliquet in in mauris. Nulla facilisi. Proin odio urna, semper a lacinia eu, tristique ut ligula.</p>
-        </div>
-        <br>
-        <div>
-            <h3>Horizontal floating</h3>
-        </div>
-        <div>
-            <div class="panel clearfix">
-                <a class="button right">.right</a>
-                <a class="button left">.left</a>
-            </div>
-        </div>
-        <br>
-        <div>
-            <h3>Rounding blocks</h3>
-        </div>
-        <br>
-        <div>
-            <a href="#" class="button">default</a>
-            <a href="#" class="button radius">.radius</a>
-            <a href="#" class="button round">.round</a>
-        </div>
     </section>
 </section>
