@@ -110,11 +110,10 @@ module.exports = function (grunt) {
                         'pipeline/src/bower_components/angular-route/angular-route.min.js',
                         'pipeline/src/bower_components/angular-sanitize/angular-sanitize.min.js'
                     ],
-                    'pipeline/public/dst/javascripts/navigation.min.js': [
-                        'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js'
-                    ],
-                    'pipeline/public/dst/javascripts/cards.min.js': [
-                        'pipeline/src/site_components/sosh/scripts/directives/cards/controller.js'
+                    'pipeline/public/dst/javascripts/app.min.js': [
+                        'pipeline/src/site_components/sosh/scripts/directives/navigation/controller.js',
+                        'pipeline/src/site_components/sosh/scripts/directives/cards/controller.js',
+                        'pipeline/src/site_components/sosh/scripts/directives/utilities/prism.js'
                     ]
     	    	}
     	    }

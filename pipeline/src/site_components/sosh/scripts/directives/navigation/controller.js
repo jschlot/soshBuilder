@@ -1,5 +1,5 @@
 angular
-	.module('feddevtools', ['ngRoute','cardsModule'])
+	.module('feddevtools', ['ngRoute','cardsModule','Prism'])
 	.directive('topNavBar',
         [ '$routeParams',
             function($routeParams){
