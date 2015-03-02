@@ -970,7 +970,17 @@ blockquote {
     line-height: 2.88rem;
   }
 }
-/* line 1, ../../../../site_components/sosh/scss/_helpers.scss */
+/* line 6, ../../../../site_components/sosh/scss/_helpers.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, ../../../../site_components/sosh/scss/_helpers.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 13, ../../../../site_components/sosh/scss/_helpers.scss */
 .valign {
   display: -webkit-box;
   display: -moz-box;
@@ -985,22 +995,39 @@ blockquote {
   justify-content: center;
 }
 
-/* line 16, ../../../../site_components/sosh/scss/_helpers.scss */
+/* line 27, ../../../../site_components/sosh/scss/_helpers.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 20, ../../../../site_components/sosh/scss/_helpers.scss */
+/* line 31, ../../../../site_components/sosh/scss/_helpers.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 25, ../../../../site_components/sosh/scss/_helpers.scss */
+/* line 36, ../../../../site_components/sosh/scss/_helpers.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 29, ../../../../site_components/sosh/scss/_helpers.scss */
+/* line 40, ../../../../site_components/sosh/scss/_helpers.scss */
+.left {
+  float: left !important;
+}
+
+/* line 43, ../../../../site_components/sosh/scss/_helpers.scss */
+.right {
+  float: right !important;
+}
+
+/* line 47, ../../../../site_components/sosh/scss/_helpers.scss */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 54, ../../../../site_components/sosh/scss/_helpers.scss */
 .clearfix {
   clear: both;
 }
