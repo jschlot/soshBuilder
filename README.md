@@ -22,15 +22,6 @@ The easiest way to get this is to install [Xcode](https://developer.apple.com/xc
 Check the version of Xcode you have by opening it up and checking the settings. It should be greater than v6.0.0.
 Be sure to have ran Xcode at least once to accept it's Terms of Service so you can proceed.
 
-
-To Dos
------
-* Install Live Reload
-* Install Sass-Doc
-* Install topcoat-doc
-* Install JSDoc
-* Find something for API documentation
-
 Setup
 -----
 
@@ -54,6 +45,12 @@ Next, install Compass:
 
     gem install compass
 
+
+Next, install JDK
+   
+   type `java -version` and then click on "More Info" in the popup, and install the latest JDK for your OS.
+   
+   
 
 Verify Installs
 -----
